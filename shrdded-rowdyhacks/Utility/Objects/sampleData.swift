@@ -21,7 +21,7 @@ var sampleLifts: [lift] = [
 
 
 var sampleProfiles: [profile] = [
-    profile(username: "aseibel", name: "Aiden", bio: "Trinity University '26 \nchasing aesthetics", weight: 155, lifts: [], dateJoined: Date(timeIntervalSinceNow: -4000000)),
-    profile(username: "khoitran", name: "Khoi", bio: "Trinity University '26 \nalso chasing aesthetics", weight: 165, lifts: [], dateJoined: Date(timeIntervalSinceNow: -3500000)),
-    profile(username: "levile23", name: "Levi", bio: "Trinity University '26 \n", weight: 155, lifts: [], dateJoined: Date(timeIntervalSinceNow: -9000000))
+    profile(username: "aseibel", name: "Aiden", bio: "Trinity University '26 \nchasing aesthetics", weight: 155, lifts: [], dateJoined: Date(timeIntervalSinceNow: -4000000), friends: []),
+    profile(username: "khoitran", name: "Khoi", bio: "Trinity University '26 \nalso chasing aesthetics", weight: 165, lifts: [], dateJoined: Date(timeIntervalSinceNow: -3500000), friends: []),
+    profile(username: "levile23", name: "Levi", bio: "Trinity University '26 \n", weight: 155, lifts: [], dateJoined: Date(timeIntervalSinceNow: -9000000), friends: [])
 ]
