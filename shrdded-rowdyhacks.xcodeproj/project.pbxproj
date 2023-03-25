@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		179A727229CF61A200CF9DAD /* shrdded_rowdyhacksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A727129CF61A200CF9DAD /* shrdded_rowdyhacksApp.swift */; };
+		179A727429CF61A200CF9DAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A727329CF61A200CF9DAD /* ContentView.swift */; };
+		179A727629CF61A300CF9DAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179A727529CF61A300CF9DAD /* Assets.xcassets */; };
+		179A727929CF61A300CF9DAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179A727829CF61A300CF9DAD /* Preview Assets.xcassets */; };
+		179A728329CF61A300CF9DAD /* shrdded_rowdyhacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A728229CF61A300CF9DAD /* shrdded_rowdyhacksTests.swift */; };
+		179A728D29CF61A400CF9DAD /* shrdded_rowdyhacksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A728C29CF61A400CF9DAD /* shrdded_rowdyhacksUITests.swift */; };
+		179A728F29CF61A400CF9DAD /* shrdded_rowdyhacksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A728E29CF61A400CF9DAD /* shrdded_rowdyhacksUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		179A727F29CF61A300CF9DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 179A726629CF61A200CF9DAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 179A726D29CF61A200CF9DAD;
+			remoteInfo = "shrdded-rowdyhacks";
+		};
+		179A728929CF61A400CF9DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 179A726629CF61A200CF9DAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 179A726D29CF61A200CF9DAD;
+			remoteInfo = "shrdded-rowdyhacks";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		179A726E29CF61A200CF9DAD /* shrdded-rowdyhacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shrdded-rowdyhacks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		179A727129CF61A200CF9DAD /* shrdded_rowdyhacksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shrdded_rowdyhacksApp.swift; sourceTree = "<group>"; };
+		179A727329CF61A200CF9DAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		179A727529CF61A300CF9DAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		179A727829CF61A300CF9DAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		179A727E29CF61A300CF9DAD /* shrdded-rowdyhacksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shrdded-rowdyhacksTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		179A728229CF61A300CF9DAD /* shrdded_rowdyhacksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shrdded_rowdyhacksTests.swift; sourceTree = "<group>"; };
+		179A728829CF61A400CF9DAD /* shrdded-rowdyhacksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shrdded-rowdyhacksUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		179A728C29CF61A400CF9DAD /* shrdded_rowdyhacksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shrdded_rowdyhacksUITests.swift; sourceTree = "<group>"; };
+		179A728E29CF61A400CF9DAD /* shrdded_rowdyhacksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shrdded_rowdyhacksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		179A726B29CF61A200CF9DAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		179A727B29CF61A300CF9DAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		179A728529CF61A400CF9DAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		179A726529CF61A200CF9DAD = {
+			isa = PBXGroup;
+			children = (
+				179A727029CF61A200CF9DAD /* shrdded-rowdyhacks */,
+				179A728129CF61A300CF9DAD /* shrdded-rowdyhacksTests */,
+				179A728B29CF61A400CF9DAD /* shrdded-rowdyhacksUITests */,
+				179A726F29CF61A200CF9DAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		179A726F29CF61A200CF9DAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				179A726E29CF61A200CF9DAD /* shrdded-rowdyhacks.app */,
+				179A727E29CF61A300CF9DAD /* shrdded-rowdyhacksTests.xctest */,
+				179A728829CF61A400CF9DAD /* shrdded-rowdyhacksUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		179A727029CF61A200CF9DAD /* shrdded-rowdyhacks */ = {
+			isa = PBXGroup;
+			children = (
+				179A727129CF61A200CF9DAD /* shrdded_rowdyhacksApp.swift */,
+				179A727329CF61A200CF9DAD /* ContentView.swift */,
+				179A727529CF61A300CF9DAD /* Assets.xcassets */,
+				179A727729CF61A300CF9DAD /* Preview Content */,
+			);
+			path = "shrdded-rowdyhacks";
+			sourceTree = "<group>";
+		};
+		179A727729CF61A300CF9DAD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				179A727829CF61A300CF9DAD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		179A728129CF61A300CF9DAD /* shrdded-rowdyhacksTests */ = {
+			isa = PBXGroup;
+			children = (
+				179A728229CF61A300CF9DAD /* shrdded_rowdyhacksTests.swift */,
+			);
+			path = "shrdded-rowdyhacksTests";
+			sourceTree = "<group>";
+		};
+		179A728B29CF61A400CF9DAD /* shrdded-rowdyhacksUITests */ = {
+			isa = PBXGroup;
+			children = (
+				179A728C29CF61A400CF9DAD /* shrdded_rowdyhacksUITests.swift */,
+				179A728E29CF61A400CF9DAD /* shrdded_rowdyhacksUITestsLaunchTests.swift */,
+			);
+			path = "shrdded-rowdyhacksUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		179A726D29CF61A200CF9DAD /* shrdded-rowdyhacks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 179A729229CF61A400CF9DAD /* Build configuration list for PBXNativeTarget "shrdded-rowdyhacks" */;
+			buildPhases = (
+				179A726A29CF61A200CF9DAD /* Sources */,
+				179A726B29CF61A200CF9DAD /* Frameworks */,
+				179A726C29CF61A200CF9DAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "shrdded-rowdyhacks";
+			productName = "shrdded-rowdyhacks";
+			productReference = 179A726E29CF61A200CF9DAD /* shrdded-rowdyhacks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		179A727D29CF61A300CF9DAD /* shrdded-rowdyhacksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 179A729529CF61A400CF9DAD /* Build configuration list for PBXNativeTarget "shrdded-rowdyhacksTests" */;
+			buildPhases = (
+				179A727A29CF61A300CF9DAD /* Sources */,
+				179A727B29CF61A300CF9DAD /* Frameworks */,
+				179A727C29CF61A300CF9DAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				179A728029CF61A300CF9DAD /* PBXTargetDependency */,
+			);
+			name = "shrdded-rowdyhacksTests";
+			productName = "shrdded-rowdyhacksTests";
+			productReference = 179A727E29CF61A300CF9DAD /* shrdded-rowdyhacksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		179A728729CF61A400CF9DAD /* shrdded-rowdyhacksUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 179A729829CF61A400CF9DAD /* Build configuration list for PBXNativeTarget "shrdded-rowdyhacksUITests" */;
+			buildPhases = (
+				179A728429CF61A400CF9DAD /* Sources */,
+				179A728529CF61A400CF9DAD /* Frameworks */,
+				179A728629CF61A400CF9DAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				179A728A29CF61A400CF9DAD /* PBXTargetDependency */,
+			);
+			name = "shrdded-rowdyhacksUITests";
+			productName = "shrdded-rowdyhacksUITests";
+			productReference = 179A728829CF61A400CF9DAD /* shrdded-rowdyhacksUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		179A726629CF61A200CF9DAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					179A726D29CF61A200CF9DAD = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					179A727D29CF61A300CF9DAD = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 179A726D29CF61A200CF9DAD;
+					};
+					179A728729CF61A400CF9DAD = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 179A726D29CF61A200CF9DAD;
+					};
+				};
+			};
+			buildConfigurationList = 179A726929CF61A200CF9DAD /* Build configuration list for PBXProject "shrdded-rowdyhacks" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 179A726529CF61A200CF9DAD;
+			productRefGroup = 179A726F29CF61A200CF9DAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				179A726D29CF61A200CF9DAD /* shrdded-rowdyhacks */,
+				179A727D29CF61A300CF9DAD /* shrdded-rowdyhacksTests */,
+				179A728729CF61A400CF9DAD /* shrdded-rowdyhacksUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		179A726C29CF61A200CF9DAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				179A727929CF61A300CF9DAD /* Preview Assets.xcassets in Resources */,
+				179A727629CF61A300CF9DAD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		179A727C29CF61A300CF9DAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		179A728629CF61A400CF9DAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		179A726A29CF61A200CF9DAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				179A727429CF61A200CF9DAD /* ContentView.swift in Sources */,
+				179A727229CF61A200CF9DAD /* shrdded_rowdyhacksApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		179A727A29CF61A300CF9DAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				179A728329CF61A300CF9DAD /* shrdded_rowdyhacksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		179A728429CF61A400CF9DAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				179A728F29CF61A400CF9DAD /* shrdded_rowdyhacksUITestsLaunchTests.swift in Sources */,
+				179A728D29CF61A400CF9DAD /* shrdded_rowdyhacksUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		179A728029CF61A300CF9DAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 179A726D29CF61A200CF9DAD /* shrdded-rowdyhacks */;
+			targetProxy = 179A727F29CF61A300CF9DAD /* PBXContainerItemProxy */;
+		};
+		179A728A29CF61A400CF9DAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 179A726D29CF61A200CF9DAD /* shrdded-rowdyhacks */;
+			targetProxy = 179A728929CF61A400CF9DAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		179A729029CF61A400CF9DAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		179A729129CF61A400CF9DAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		179A729329CF61A400CF9DAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"shrdded-rowdyhacks/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aseibel.shrdded-rowdyhacks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		179A729429CF61A400CF9DAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"shrdded-rowdyhacks/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aseibel.shrdded-rowdyhacks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		179A729629CF61A400CF9DAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aseibel.shrdded-rowdyhacksTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/shrdded-rowdyhacks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/shrdded-rowdyhacks";
+			};
+			name = Debug;
+		};
+		179A729729CF61A400CF9DAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aseibel.shrdded-rowdyhacksTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/shrdded-rowdyhacks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/shrdded-rowdyhacks";
+			};
+			name = Release;
+		};
+		179A729929CF61A400CF9DAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aseibel.shrdded-rowdyhacksUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "shrdded-rowdyhacks";
+			};
+			name = Debug;
+		};
+		179A729A29CF61A400CF9DAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aseibel.shrdded-rowdyhacksUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "shrdded-rowdyhacks";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		179A726929CF61A200CF9DAD /* Build configuration list for PBXProject "shrdded-rowdyhacks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				179A729029CF61A400CF9DAD /* Debug */,
+				179A729129CF61A400CF9DAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		179A729229CF61A400CF9DAD /* Build configuration list for PBXNativeTarget "shrdded-rowdyhacks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				179A729329CF61A400CF9DAD /* Debug */,
+				179A729429CF61A400CF9DAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		179A729529CF61A400CF9DAD /* Build configuration list for PBXNativeTarget "shrdded-rowdyhacksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				179A729629CF61A400CF9DAD /* Debug */,
+				179A729729CF61A400CF9DAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		179A729829CF61A400CF9DAD /* Build configuration list for PBXNativeTarget "shrdded-rowdyhacksUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				179A729929CF61A400CF9DAD /* Debug */,
+				179A729A29CF61A400CF9DAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 179A726629CF61A200CF9DAD /* Project object */;
+}
