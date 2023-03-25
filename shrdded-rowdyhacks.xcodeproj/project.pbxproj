@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		179A727229CF61A200CF9DAD /* shrdded_rowdyhacksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A727129CF61A200CF9DAD /* shrdded_rowdyhacksApp.swift */; };
-		179A727429CF61A200CF9DAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A727329CF61A200CF9DAD /* ContentView.swift */; };
+		179A727429CF61A200CF9DAD /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A727329CF61A200CF9DAD /* FeedView.swift */; };
 		179A727629CF61A300CF9DAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179A727529CF61A300CF9DAD /* Assets.xcassets */; };
 		179A727929CF61A300CF9DAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179A727829CF61A300CF9DAD /* Preview Assets.xcassets */; };
 		179A728329CF61A300CF9DAD /* shrdded_rowdyhacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A728229CF61A300CF9DAD /* shrdded_rowdyhacksTests.swift */; };
 		179A728D29CF61A400CF9DAD /* shrdded_rowdyhacksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A728C29CF61A400CF9DAD /* shrdded_rowdyhacksUITests.swift */; };
 		179A728F29CF61A400CF9DAD /* shrdded_rowdyhacksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A728E29CF61A400CF9DAD /* shrdded_rowdyhacksUITestsLaunchTests.swift */; };
+		179A729C29CF61F400CF9DAD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A729B29CF61F400CF9DAD /* ProfileView.swift */; };
+		179A729E29CF620000CF9DAD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A729D29CF620000CF9DAD /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		179A726E29CF61A200CF9DAD /* shrdded-rowdyhacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shrdded-rowdyhacks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		179A727129CF61A200CF9DAD /* shrdded_rowdyhacksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shrdded_rowdyhacksApp.swift; sourceTree = "<group>"; };
-		179A727329CF61A200CF9DAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		179A727329CF61A200CF9DAD /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		179A727529CF61A300CF9DAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		179A727829CF61A300CF9DAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		179A727E29CF61A300CF9DAD /* shrdded-rowdyhacksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shrdded-rowdyhacksTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,8 @@
 		179A728829CF61A400CF9DAD /* shrdded-rowdyhacksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shrdded-rowdyhacksUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		179A728C29CF61A400CF9DAD /* shrdded_rowdyhacksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shrdded_rowdyhacksUITests.swift; sourceTree = "<group>"; };
 		179A728E29CF61A400CF9DAD /* shrdded_rowdyhacksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shrdded_rowdyhacksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		179A729B29CF61F400CF9DAD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		179A729D29CF620000CF9DAD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				179A727129CF61A200CF9DAD /* shrdded_rowdyhacksApp.swift */,
-				179A727329CF61A200CF9DAD /* ContentView.swift */,
+				179A72A029CF621800CF9DAD /* Utility */,
+				179A729F29CF620600CF9DAD /* Tabs */,
 				179A727529CF61A300CF9DAD /* Assets.xcassets */,
 				179A727729CF61A300CF9DAD /* Preview Content */,
 			);
@@ -125,6 +130,23 @@
 				179A728E29CF61A400CF9DAD /* shrdded_rowdyhacksUITestsLaunchTests.swift */,
 			);
 			path = "shrdded-rowdyhacksUITests";
+			sourceTree = "<group>";
+		};
+		179A729F29CF620600CF9DAD /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				179A727329CF61A200CF9DAD /* FeedView.swift */,
+				179A729D29CF620000CF9DAD /* MapView.swift */,
+				179A729B29CF61F400CF9DAD /* ProfileView.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		179A72A029CF621800CF9DAD /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				179A727429CF61A200CF9DAD /* ContentView.swift in Sources */,
+				179A727429CF61A200CF9DAD /* FeedView.swift in Sources */,
+				179A729E29CF620000CF9DAD /* MapView.swift in Sources */,
+				179A729C29CF61F400CF9DAD /* ProfileView.swift in Sources */,
 				179A727229CF61A200CF9DAD /* shrdded_rowdyhacksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"shrdded-rowdyhacks/Preview Content\"";
+				DEVELOPMENT_TEAM = C72D493DTH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -445,6 +470,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"shrdded-rowdyhacks/Preview Content\"";
+				DEVELOPMENT_TEAM = C72D493DTH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -11,7 +11,21 @@ import SwiftUI
 struct shrdded_rowdyhacksApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView{
+                FeedView()
+                    .tabItem {
+                        Label("Feed", systemImage: "house.fill")
+                    }
+                MapView()
+                    .tabItem {
+                        Label("Map", systemImage: "map.fill")
+                    }
+                ProfileView()
+                    .tabItem {
+                        Label("Profile", systemImage: "figure.mind.and.body")
+                    }
+
+            }
         }
     }
 }
