@@ -21,6 +21,8 @@
 		179A72A829CF6F8600CF9DAD /* lift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A72A729CF6F8600CF9DAD /* lift.swift */; };
 		179A72AB29CF78DA00CF9DAD /* LiftPostSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A72AA29CF78DA00CF9DAD /* LiftPostSubView.swift */; };
 		17F45AD029CF8B5400214917 /* sampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F45ACF29CF8B5400214917 /* sampleData.swift */; };
+		17F45AD229CFB14C00214917 /* AddLiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F45AD129CFB14C00214917 /* AddLiftView.swift */; };
+		17F45AD429CFBBDA00214917 /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F45AD329CFBBDA00214917 /* functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		179A72A729CF6F8600CF9DAD /* lift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lift.swift; sourceTree = "<group>"; };
 		179A72AA29CF78DA00CF9DAD /* LiftPostSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftPostSubView.swift; sourceTree = "<group>"; };
 		17F45ACF29CF8B5400214917 /* sampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleData.swift; sourceTree = "<group>"; };
+		17F45AD129CFB14C00214917 /* AddLiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLiftView.swift; sourceTree = "<group>"; };
+		17F45AD329CFBBDA00214917 /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				179A72A129CF67DB00CF9DAD /* Objects */,
+				17F45AD329CFBBDA00214917 /* functions.swift */,
+				17F45ACF29CF8B5400214917 /* sampleData.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -167,7 +173,6 @@
 				179A72A329CF67EE00CF9DAD /* profile.swift */,
 				179A72A529CF684500CF9DAD /* goal.swift */,
 				179A72A729CF6F8600CF9DAD /* lift.swift */,
-				17F45ACF29CF8B5400214917 /* sampleData.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				179A72AA29CF78DA00CF9DAD /* LiftPostSubView.swift */,
+				17F45AD129CFB14C00214917 /* AddLiftView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -311,11 +317,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				17F45AD029CF8B5400214917 /* sampleData.swift in Sources */,
+				17F45AD229CFB14C00214917 /* AddLiftView.swift in Sources */,
 				179A72A629CF684500CF9DAD /* goal.swift in Sources */,
 				179A72A829CF6F8600CF9DAD /* lift.swift in Sources */,
 				179A72AB29CF78DA00CF9DAD /* LiftPostSubView.swift in Sources */,
 				179A727429CF61A200CF9DAD /* FeedTab.swift in Sources */,
 				179A72A429CF67EE00CF9DAD /* profile.swift in Sources */,
+				17F45AD429CFBBDA00214917 /* functions.swift in Sources */,
 				179A729E29CF620000CF9DAD /* MapTab.swift in Sources */,
 				179A729C29CF61F400CF9DAD /* ProfileTab.swift in Sources */,
 				179A727229CF61A200CF9DAD /* shrdded_rowdyhacksApp.swift in Sources */,

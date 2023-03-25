@@ -15,7 +15,6 @@ struct lift: Identifiable, Hashable{
     
     var id = UUID()
     
-    var account: profile
     var type: String
     var amount: Int
     var date: Date

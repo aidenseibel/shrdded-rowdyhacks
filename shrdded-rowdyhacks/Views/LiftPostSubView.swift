@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct LiftPostSubView: View {
+    @State var profile: profile
     
     var lift: lift
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
             HStack{
-                Text("\(lift.account.username)")
+                Text("\(profile.username)")
                     .font(.title2)
                     .bold()
                 Text("posted a new lift")
                     .foregroundColor(Color("darkgrey"))
                 Spacer()
-                Text("yesterday")
+                Text("\(getTimeSinceNow(from: lift.date))")
                     .foregroundColor(Color("darkgrey"))
                     .font(.custom("System", size: 14))
 
@@ -53,7 +54,7 @@ struct LiftPostSubView: View {
 
 struct LiftPostSubView_Previews: PreviewProvider {
     static var previews: some View {
-        LiftPostSubView(lift: sampleLifts[0])
+        LiftPostSubView(profile: sampleProfiles[0], lift: sampleLifts[0])
             .previewLayout(.sizeThatFits)
     }
 }

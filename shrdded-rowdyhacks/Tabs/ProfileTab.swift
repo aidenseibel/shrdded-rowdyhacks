@@ -85,6 +85,22 @@ struct ProfileTab: View {
                     .background(.gray)
                     .cornerRadius(10)
                     
+                    
+                    //MARK: LIFTS
+                    Text("recent lifts")
+                        .font(.title)
+                        .bold()
+                        .padding(EdgeInsets(top: 20, leading: 5, bottom: 5, trailing: 5))
+                    VStack{
+                        ForEach(profile.lifts) { lift in
+                            LiftPostSubView(profile: profile, lift: lift)
+                        }
+                    }
+                    .padding(15)
+                    .background(.gray)
+                    .cornerRadius(10)
+
+                    
                 }
                 .padding()
             }

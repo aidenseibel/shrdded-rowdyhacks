@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct shrdded_rowdyhacksApp: App {
-    var currentUser: profile = sampleProfiles[0]
+    @State var currentUser: profile = sampleProfiles[0]
     
     var body: some Scene {
         WindowGroup {
             TabView{
-                FeedTab()
+                FeedTab(profile: currentUser)
                     .tabItem {
                         Label("Feed", systemImage: "house.fill")
                     }
