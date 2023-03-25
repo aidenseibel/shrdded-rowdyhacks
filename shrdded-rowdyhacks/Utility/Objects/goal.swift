@@ -8,8 +8,6 @@
 import Foundation
 
 struct goal {
-//    final var goalCategories: [String] = ["weight", "personal record"]
-
     var name: String
     var amount: Int
     var category: String

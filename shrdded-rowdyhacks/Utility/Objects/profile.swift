@@ -17,8 +17,6 @@ struct profile: Identifiable, Hashable{
     var username, name, bio: String
     var weight: Int
     var lifts: [lift]
-//    var prs: [lift]
-    var goals: [goal]
     var dateJoined: Date
     
     func hash(into hasher: inout Hasher) {
@@ -26,11 +24,3 @@ struct profile: Identifiable, Hashable{
     }
 }
 
-var sampleProfiles: [profile] = [
-    profile(username: "aseibel", name: "Aiden", bio: "Trinity University '26 \nchasing aesthetics", weight: 155, lifts: [], goals: [], dateJoined: Date(timeIntervalSinceNow: -4000000)),
-    profile(username: "khoitran", name: "Khoi", bio: "Trinity University '26 \nalso chasing aesthetics", weight: 165, lifts: [], goals: [], dateJoined: Date(timeIntervalSinceNow: -3500000)),
-    profile(username: "levile23", name: "Levi", bio: "Trinity University '26 \n", weight: 155, lifts: [], goals: [], dateJoined: Date(timeIntervalSinceNow: -9000000))
-
-
-    
-]
