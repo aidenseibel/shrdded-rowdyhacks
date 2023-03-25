@@ -9,18 +9,20 @@ import SwiftUI
 
 @main
 struct shrdded_rowdyhacksApp: App {
+    var currentUser: profile = sampleProfiles[0]
+    
     var body: some Scene {
         WindowGroup {
             TabView{
-                FeedView()
+                FeedTab()
                     .tabItem {
                         Label("Feed", systemImage: "house.fill")
                     }
-                MapView()
+                MapTab()
                     .tabItem {
                         Label("Map", systemImage: "map.fill")
                     }
-                ProfileView()
+                ProfileTab(profile: currentUser)
                     .tabItem {
                         Label("Profile", systemImage: "figure.mind.and.body")
                     }
