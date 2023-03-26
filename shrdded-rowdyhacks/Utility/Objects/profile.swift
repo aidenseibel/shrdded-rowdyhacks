@@ -16,7 +16,7 @@ struct profile: Identifiable, Hashable{
     
     var username, name, bio: String
     var weight: Int
-    var lifts: [lift] = [lift(type: "bench", amount: 0, date: Date(), isPersonalRecord: false), lift(type: "squat", amount: 0, date: Date(), isPersonalRecord: false), lift(type: "deadlift", amount: 0, date: Date(), isPersonalRecord: false)]
+//    var lifts: [lift] = [lift(type: "bench", amount: 0, date: Date(), isPersonalRecord: false), lift(type: "squat", amount: 0, date: Date(), isPersonalRecord: false), lift(type: "deadlift", amount: 0, date: Date(), isPersonalRecord: false)]
     var dateJoined: Date
     var friends: [profile?]
     
@@ -24,15 +24,15 @@ struct profile: Identifiable, Hashable{
         hasher.combine(id)
     }
     
-    mutating func addLift(type: String, amount: Int, desc: String){
-        let currentPR = getCurrentPersonalRecordLiftFromLiftType(account: self, liftType: type)
-        var isPR = false
-        if amount > currentPR.amount{
-            isPR = true
-        }
-        lifts.append(lift(type: type, amount: amount, date: Date(), isPersonalRecord: isPR))
-        print(lifts)
-    }
+//    mutating func addLift(type: String, amount: Int, desc: String){
+//        let currentPR = getCurrentPersonalRecordLiftFromLiftType(account: self, liftType: type)
+//        var isPR = false
+//        if amount > currentPR.amount{
+//            isPR = true
+//        }
+//        lifts.append(lift(type: type, amount: amount, date: Date(), isPersonalRecord: isPR))
+//        print(lifts)
+//    }
 }
 
 class currentUserObservableObject: ObservableObject{

@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct FeedTab: View {
-    @State var profile: profile
+    @State var accountName: String
     
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
                     ForEach(sampleLifts, id: \.self){ lift in
-                        LiftPostSubView(profile: profile, lift: lift)
+                        LiftPostSubView(accountName: accountName, lift: lift)
 
                     }.overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
                     
@@ -28,7 +28,7 @@ struct FeedTab: View {
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {
-                        AddLiftView(profile: profile)
+                        AddLiftView(accountName: accountName)
                     } label: {
                         Text("Add Lift")
                             .font(.custom("System", size: 14))
@@ -46,7 +46,7 @@ struct FeedTab: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedTab(profile: sampleProfiles[0])
+        FeedTab(accountName: "accountName")
     }
 }
 

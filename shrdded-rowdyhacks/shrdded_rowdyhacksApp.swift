@@ -14,7 +14,7 @@ struct shrdded_rowdyhacksApp: App {
     var body: some Scene {
         WindowGroup {
             TabView{
-                FeedTab(profile: currentUser)
+                FeedTab(accountName: currentUser.username)
                     .tabItem {
                         Label("Feed", systemImage: "house.fill")
                     }
@@ -22,7 +22,7 @@ struct shrdded_rowdyhacksApp: App {
                     .tabItem {
                         Label("Map", systemImage: "map.fill")
                     }
-                ProfileTab(profile: currentUser)
+                ProfileTab(accountName: currentUser.username, accountBio: currentUser.bio, dateJoined: currentUser.dateJoined, allLifts: sampleLifts, personalRecords: sampleLifts)
                     .tabItem {
                         Label("Profile", systemImage: "figure.mind.and.body")
                     }

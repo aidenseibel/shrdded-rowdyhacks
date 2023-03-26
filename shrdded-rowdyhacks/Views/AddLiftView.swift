@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct AddLiftView: View {
-    @State var profile: profile
+    @State var accountName: String
+    
+    
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     let liftTypes: [String] = ["bench","squat","deadlift"]
@@ -74,7 +76,8 @@ struct AddLiftView: View {
                 if let amountToInt = Int(amountLifted){
                     if amountToInt > 0{
                         if checkIfTextIsAppropriate(input: description){
-                            profile.addLift(type: liftTypeSelected, amount: amountToInt, desc: description)
+                            //MARK: ADD FUNCTION
+//                            profile.addLift(type: liftTypeSelected, amount: amountToInt, desc: description)
                             self.presentationMode.wrappedValue.dismiss()
                         }else{
                             captionIsAppropriate = false
@@ -106,6 +109,6 @@ struct AddLiftView: View {
 
 struct AddLiftView_Previews: PreviewProvider {
     static var previews: some View {
-        AddLiftView(profile: sampleProfiles[0])
+        AddLiftView(accountName: "accountName")
     }
 }

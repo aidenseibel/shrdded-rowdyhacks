@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ProfileTab: View {
-    @State var profile: profile
+    @State var accountName: String
+    @State var accountBio: String
+    @State var dateJoined: Date
+    @State var allLifts: [lift]
+    @State var personalRecords: [lift]
     
     @State var currentDate = Date.now
     var separationBetweenLazyHStackElements: Double = 0.25
@@ -34,7 +38,7 @@ struct ProfileTab: View {
                                 .cornerRadius(10)
 
                             VStack(alignment: .center){
-                                Text("\(String(format: "%.0f", (currentDate.distance(to: profile.dateJoined)) / -86400))")
+                                Text("\(String(format: "%.0f", (currentDate.distance(to: dateJoined)) / -86400))")
                                     .font(.title)
                                     .foregroundColor(.white)
                                     .bold()
@@ -46,7 +50,7 @@ struct ProfileTab: View {
                             .frame(width: UIScreen.main.bounds.width * separationBetweenLazyHStackElements, height: UIScreen.main.bounds.width * separationBetweenLazyHStackElements * 0.7)                                .background(Color(colorOfElementsInLazyHStack))
                                 .cornerRadius(10)
                             
-                            ForEach(getAllCurrentPersonalRecordsForAllTypes(account: profile)) { pr in
+                            ForEach(personalRecords, id: \.self) { pr in
                                 VStack(alignment: .center){
                                     Text("\(pr.amount)")
                                         .font(.title)
@@ -58,7 +62,6 @@ struct ProfileTab: View {
                                 .frame(width: UIScreen.main.bounds.width * separationBetweenLazyHStackElements, height: UIScreen.main.bounds.width * separationBetweenLazyHStackElements * 0.7)
                                 .background(Color(colorOfElementsInLazyHStack))
                                 .cornerRadius(10)
-
                             }
 
                         }
@@ -72,7 +75,7 @@ struct ProfileTab: View {
                         .font(.title)
                         .bold()
                         .padding(EdgeInsets(top: 20, leading: 5, bottom: 1, trailing: 5))
-                    Text("\(profile.bio)")
+                    Text("\(accountBio)")
                         .padding(5)
 
                     
@@ -95,11 +98,11 @@ struct ProfileTab: View {
                         .bold()
                         .padding(EdgeInsets(top: 20, leading: 5, bottom: 5, trailing: 5))
                     VStack{
-                        ForEach(profile.lifts) { lift in
-                            NavigationLink(destination: LiftPostSubView(profile: profile, lift: lift)){
+                        ForEach(allLifts) { lift in
+                            NavigationLink(destination: LiftPostSubView(accountName: accountName, lift: lift)){
                                 VStack(alignment: .leading, spacing: 10){
                                     HStack{
-                                        Text("\(getTimeSinceNow(from: lift.date))")
+                                        Text("\(getTimeSinceNow(from: lift.dateCreated))")
                                             .foregroundColor(Color("darkgrey"))
                                             .font(.custom("System", size: 14))
                                         Spacer()
@@ -128,7 +131,7 @@ struct ProfileTab: View {
                 }
                 .padding()
             }
-            .navigationTitle("\(profile.username)")
+            .navigationTitle("\(accountName)")
             .navigationBarTitleDisplayMode(.large)
         }
     }
@@ -136,6 +139,6 @@ struct ProfileTab: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileTab(profile: sampleProfiles[0])
+        ProfileTab(accountName: "accountName", accountBio: "fake bio", dateJoined: Date(timeIntervalSinceNow: -200000), allLifts: sampleLifts, personalRecords: sampleLifts)
     }
 }

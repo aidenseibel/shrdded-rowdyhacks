@@ -15,9 +15,12 @@ struct lift: Identifiable, Hashable{
     
     var id = UUID()
     
+    var liftID: String
+    var userID: String
+    
     var type: String
     var amount: Int
-    var date: Date
+    var dateCreated: Date
     var isPersonalRecord: Bool
     var description: String?
     
