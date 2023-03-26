@@ -10,6 +10,8 @@ import Foundation
 class AuthModel: ObservableObject{
     @Published var isLoggedIn: Bool = false
     
+    @Published var currentUserUserID: String = ""
+    
     @Published var currentUserEmail: String = ""
     @Published var currentUserUsername: String = ""
     @Published var currentUserBio: String = ""

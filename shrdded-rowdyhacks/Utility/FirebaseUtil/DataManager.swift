@@ -93,10 +93,29 @@ class DataManager: ObservableObject{
     func addUser(id: UUID, email: String, username: String, bio: String){
         let db = Firestore.firestore()
         let ref = db.collection("Users").document(id.uuidString)
-        ref.setData(["email" : email, "username": username, "bio": bio]){ error in
+        ref.setData(["email" : email, "username": username, "bio": bio, "dateJoined": FieldValue.serverTimestamp(), "friendsByEmail": []]){ error in
             if let error = error{
                 print(error.localizedDescription)
             }
         }
     }
+    
+    // MARK: UPDATE USER FUNCTIONS
+    
+    func updateUserFriends(userID: String, friends: [user], handler: @escaping (_ success: Bool) -> ()) {
+        let data: [String:Any] = ["friendsByEmail": friends]
+        let db = Firestore.firestore()
+
+        db.collection("Users").document(userID).updateData(data) { (error) in
+            if let error = error {
+                print("Error updating friends. \(error)")
+                handler(false)
+                return
+            } else {
+                handler(true)
+                return
+            }
+        }
+    }
+
 }

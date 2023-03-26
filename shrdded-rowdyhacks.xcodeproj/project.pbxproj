@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17754DE629D0932D001FAF85 /* gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17754DE529D0932C001FAF85 /* gym.swift */; };
+		17754DE829D0977D001FAF85 /* ShowSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17754DE729D0977D001FAF85 /* ShowSearchResults.swift */; };
 		179A727229CF61A200CF9DAD /* shrdded_rowdyhacksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A727129CF61A200CF9DAD /* shrdded_rowdyhacksApp.swift */; };
 		179A727429CF61A200CF9DAD /* FeedTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A727329CF61A200CF9DAD /* FeedTab.swift */; };
 		179A727629CF61A300CF9DAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179A727529CF61A300CF9DAD /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17754DE529D0932C001FAF85 /* gym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gym.swift; sourceTree = "<group>"; };
+		17754DE729D0977D001FAF85 /* ShowSearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSearchResults.swift; sourceTree = "<group>"; };
 		179A726E29CF61A200CF9DAD /* shrdded-rowdyhacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shrdded-rowdyhacks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		179A727129CF61A200CF9DAD /* shrdded_rowdyhacksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shrdded_rowdyhacksApp.swift; sourceTree = "<group>"; };
 		179A727329CF61A200CF9DAD /* FeedTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTab.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 			children = (
 				179A72A329CF67EE00CF9DAD /* user.swift */,
 				179A72A729CF6F8600CF9DAD /* lift.swift */,
+				17754DE529D0932C001FAF85 /* gym.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 				17F45AE429D0009600214917 /* LoginView.swift */,
 				17F45AE529D0009600214917 /* SignupView.swift */,
 				17F45AF529D07BB600214917 /* FinalizeAccountCreation.swift */,
+				17754DE729D0977D001FAF85 /* ShowSearchResults.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -366,10 +372,12 @@
 				179A72AB29CF78DA00CF9DAD /* LiftPostSubView.swift in Sources */,
 				179A727429CF61A200CF9DAD /* FeedTab.swift in Sources */,
 				17F45AE629D0009600214917 /* LoginView.swift in Sources */,
+				17754DE629D0932D001FAF85 /* gym.swift in Sources */,
 				179A72A429CF67EE00CF9DAD /* user.swift in Sources */,
 				17F45AD429CFBBDA00214917 /* functions.swift in Sources */,
 				17F45AE929D000B700214917 /* AuthModel.swift in Sources */,
 				179A729E29CF620000CF9DAD /* MapTab.swift in Sources */,
+				17754DE829D0977D001FAF85 /* ShowSearchResults.swift in Sources */,
 				17F45AF629D07BB600214917 /* FinalizeAccountCreation.swift in Sources */,
 				179A729C29CF61F400CF9DAD /* ProfileTab.swift in Sources */,
 				17F45AE729D0009600214917 /* SignupView.swift in Sources */,

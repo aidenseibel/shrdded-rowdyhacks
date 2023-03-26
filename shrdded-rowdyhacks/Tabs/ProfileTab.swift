@@ -25,16 +25,18 @@ struct ProfileTab: View {
                     Button {
                         for user in dataManager.users{
                             if user.email == authModel.currentUserEmail{
+                                authModel.currentUserUserID = user.id.uuidString
                                 authModel.currentUserUsername = user.username
                                 authModel.currentUserBio = user.bio
+                                authModel.currentUserDateJoined = user.dateJoined
                             }
                         }
                     } label: {
                         Text("refresh profile")
                     }
-
                     //MARK: LAZY HSTACK
                     ScrollView(.horizontal, showsIndicators: false){
+                        
                         HStack(alignment: .top, spacing: 20){
                             ForEach(getAllPRsFromEmail(email: authModel.currentUserEmail, lifts: dataManager.lifts), id: \.self) { pr in
                                 VStack(alignment: .center){

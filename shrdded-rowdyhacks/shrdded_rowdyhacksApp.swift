@@ -50,10 +50,10 @@ struct shrdded_rowdyhacksApp: App {
                         .tabItem {
                             Label("Feed", systemImage: "house.fill")
                         }
-//                    MapTab()
-//                        .tabItem {
-//                            Label("Map", systemImage: "map.fill")
-//                        }
+                    MapTab()
+                        .tabItem {
+                            Label("Map", systemImage: "map.fill")
+                        }
                     ProfileTab()
                         .tabItem {
                             Label("Profile", systemImage: "figure.mind.and.body")
@@ -61,7 +61,7 @@ struct shrdded_rowdyhacksApp: App {
                 }
                 .environmentObject(authModel)
                 .environmentObject(dataManager)
-                .sheet(isPresented: $authModel.needsUserNameAndBio, content: {
+                .fullScreenCover(isPresented: $authModel.needsUserNameAndBio, content: {
                     FinalizeAccountCreation(email: $authModel.currentUserEmail)
                         .environmentObject(authModel)
                         .environmentObject(dataManager)
@@ -77,6 +77,7 @@ struct shrdded_rowdyhacksApp: App {
                             authModel.currentUserEmail = user?.email ?? "no email"
                             for user in dataManager.users{
                                 if user.email == authModel.currentUserEmail{
+                                    authModel.currentUserUserID = user.id.uuidString
                                     authModel.currentUserUsername = user.username
                                     authModel.currentUserBio = user.bio
                                     authModel.currentUserDateJoined = user.dateJoined

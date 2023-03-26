@@ -21,7 +21,7 @@ struct FinalizeAccountCreation: View {
     var body: some View {
         VStack{
             ScrollView{
-                VStack{
+                VStack(alignment: .leading){
                     Text("just two more things")
                         .font(.largeTitle)
                         .bold()

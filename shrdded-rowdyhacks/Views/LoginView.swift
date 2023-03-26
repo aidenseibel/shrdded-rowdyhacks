@@ -63,6 +63,7 @@ struct LoginView: View {
             if error != nil {
                 print(error!.localizedDescription)
             }else{
+                authModel.needsUserNameAndBio = false
                 authModel.isLoggedIn = true
             }
         }
