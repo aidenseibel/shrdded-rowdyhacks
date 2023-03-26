@@ -71,9 +71,6 @@ struct shrdded_rowdyhacksApp: App {
                 .onAppear{
                     Auth.auth().addStateDidChangeListener { auth, user in
                         if user != nil{
-                            authModel.isLoggedIn = true
-                            print(authModel.isLoggedIn)
-                            print(user?.email ?? "User not signed in.")
                             authModel.currentUserEmail = user?.email ?? "no email"
                             for user in dataManager.users{
                                 if user.email == authModel.currentUserEmail{
@@ -84,6 +81,7 @@ struct shrdded_rowdyhacksApp: App {
                                     authModel.currentUserFriends = user.friendsByEmail
                                 }
                             }
+                            authModel.isLoggedIn = true
                         }
                     }
                 }

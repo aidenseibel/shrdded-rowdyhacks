@@ -18,7 +18,10 @@ struct FeedTab: View {
                     Button {
                         dataManager.fetchLifts()
                     } label: {
-                        Text("refresh feed")
+                        HStack{
+                            Text("refresh feed")
+                            Spacer()
+                        }
                     }
 
                     ForEach(sortLiftArrayByTimeWithEarliestFirst(lifts: dataManager.lifts).reversed(), id: \.self){ lift in
