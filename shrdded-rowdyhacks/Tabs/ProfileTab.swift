@@ -26,30 +26,6 @@ struct ProfileTab: View {
                     //MARK: LAZY HSTACK
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack(alignment: .top, spacing: 20){
-                            VStack(alignment: .center){
-                                Text("150")
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    .bold()
-                                Text("weight")
-                                    .foregroundColor(.white)
-                            }
-                            .frame(width: UIScreen.main.bounds.width * separationBetweenLazyHStackElements, height: UIScreen.main.bounds.width * separationBetweenLazyHStackElements * 0.7)                                .background(Color(colorOfElementsInLazyHStack))
-                                .cornerRadius(10)
-
-                            VStack(alignment: .center){
-                                Text("\(String(format: "%.0f", (currentDate.distance(to: dateJoined)) / -86400))")
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    .bold()
-                                Text("days on app")
-                                    .font(.custom("System", size: 14))
-                                    .foregroundColor(.white)
-
-                            }
-                            .frame(width: UIScreen.main.bounds.width * separationBetweenLazyHStackElements, height: UIScreen.main.bounds.width * separationBetweenLazyHStackElements * 0.7)                                .background(Color(colorOfElementsInLazyHStack))
-                                .cornerRadius(10)
-                            
                             ForEach(personalRecords, id: \.self) { pr in
                                 VStack(alignment: .center){
                                     Text("\(pr.amount)")
@@ -63,6 +39,19 @@ struct ProfileTab: View {
                                 .background(Color(colorOfElementsInLazyHStack))
                                 .cornerRadius(10)
                             }
+                            
+                            VStack(alignment: .center){
+                                Text("\(String(format: "%.0f", (currentDate.distance(to: dateJoined)) / -86400))")
+                                    .font(.title)
+                                    .foregroundColor(.white)
+                                    .bold()
+                                Text("days on app")
+                                    .font(.custom("System", size: 14))
+                                    .foregroundColor(.white)
+
+                            }
+                            .frame(width: UIScreen.main.bounds.width * separationBetweenLazyHStackElements, height: UIScreen.main.bounds.width * separationBetweenLazyHStackElements * 0.7)                                .background(Color(colorOfElementsInLazyHStack))
+                                .cornerRadius(10)
 
                         }
                     }
@@ -99,7 +88,7 @@ struct ProfileTab: View {
                         .padding(EdgeInsets(top: 20, leading: 5, bottom: 5, trailing: 5))
                     VStack{
                         ForEach(allLifts) { lift in
-                            NavigationLink(destination: LiftPostSubView(accountName: accountName, lift: lift)){
+                            NavigationLink(destination: LiftPostSubView(lift: lift)){
                                 VStack(alignment: .leading, spacing: 10){
                                     HStack{
                                         Text("\(getTimeSinceNow(from: lift.dateCreated))")
@@ -139,6 +128,6 @@ struct ProfileTab: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileTab(accountName: "accountName", accountBio: "fake bio", dateJoined: Date(timeIntervalSinceNow: -200000), allLifts: sampleLifts, personalRecords: sampleLifts)
+        ProfileTab(accountName: "accountName", accountBio: "fake bio", dateJoined: Date(timeIntervalSinceNow: -200000), allLifts: [], personalRecords: [])
     }
 }

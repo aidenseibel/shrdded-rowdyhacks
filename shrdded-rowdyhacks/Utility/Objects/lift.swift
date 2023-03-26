@@ -15,7 +15,6 @@ struct lift: Identifiable, Hashable{
     
     var id = UUID()
     
-    var liftID: String
     var userID: String
     
     var type: String

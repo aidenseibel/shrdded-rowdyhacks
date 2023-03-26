@@ -16,11 +16,9 @@
 		179A728F29CF61A400CF9DAD /* shrdded_rowdyhacksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A728E29CF61A400CF9DAD /* shrdded_rowdyhacksUITestsLaunchTests.swift */; };
 		179A729C29CF61F400CF9DAD /* ProfileTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A729B29CF61F400CF9DAD /* ProfileTab.swift */; };
 		179A729E29CF620000CF9DAD /* MapTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A729D29CF620000CF9DAD /* MapTab.swift */; };
-		179A72A429CF67EE00CF9DAD /* profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A72A329CF67EE00CF9DAD /* profile.swift */; };
-		179A72A629CF684500CF9DAD /* goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A72A529CF684500CF9DAD /* goal.swift */; };
+		179A72A429CF67EE00CF9DAD /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A72A329CF67EE00CF9DAD /* user.swift */; };
 		179A72A829CF6F8600CF9DAD /* lift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A72A729CF6F8600CF9DAD /* lift.swift */; };
 		179A72AB29CF78DA00CF9DAD /* LiftPostSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A72AA29CF78DA00CF9DAD /* LiftPostSubView.swift */; };
-		17F45AD029CF8B5400214917 /* sampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F45ACF29CF8B5400214917 /* sampleData.swift */; };
 		17F45AD229CFB14C00214917 /* AddLiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F45AD129CFB14C00214917 /* AddLiftView.swift */; };
 		17F45AD429CFBBDA00214917 /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F45AD329CFBBDA00214917 /* functions.swift */; };
 		17F45AD629CFFE4F00214917 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17F45AD529CFFE4F00214917 /* GoogleService-Info.plist */; };
@@ -33,7 +31,7 @@
 		17F45AE629D0009600214917 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F45AE429D0009600214917 /* LoginView.swift */; };
 		17F45AE729D0009600214917 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F45AE529D0009600214917 /* SignupView.swift */; };
 		17F45AE929D000B700214917 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F45AE829D000B700214917 /* AuthModel.swift */; };
-		17F45AEB29D00E5C00214917 /* CompleteProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F45AEA29D00E5C00214917 /* CompleteProfileView.swift */; };
+		17F45AF229D030B800214917 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F45AF129D030B800214917 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,18 +64,16 @@
 		179A728E29CF61A400CF9DAD /* shrdded_rowdyhacksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shrdded_rowdyhacksUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		179A729B29CF61F400CF9DAD /* ProfileTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTab.swift; sourceTree = "<group>"; };
 		179A729D29CF620000CF9DAD /* MapTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTab.swift; sourceTree = "<group>"; };
-		179A72A329CF67EE00CF9DAD /* profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.swift; sourceTree = "<group>"; };
-		179A72A529CF684500CF9DAD /* goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goal.swift; sourceTree = "<group>"; };
+		179A72A329CF67EE00CF9DAD /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		179A72A729CF6F8600CF9DAD /* lift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lift.swift; sourceTree = "<group>"; };
 		179A72AA29CF78DA00CF9DAD /* LiftPostSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftPostSubView.swift; sourceTree = "<group>"; };
-		17F45ACF29CF8B5400214917 /* sampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleData.swift; sourceTree = "<group>"; };
 		17F45AD129CFB14C00214917 /* AddLiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLiftView.swift; sourceTree = "<group>"; };
 		17F45AD329CFBBDA00214917 /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
 		17F45AD529CFFE4F00214917 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		17F45AE429D0009600214917 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		17F45AE529D0009600214917 /* SignupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		17F45AE829D000B700214917 /* AuthModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
-		17F45AEA29D00E5C00214917 /* CompleteProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteProfileView.swift; sourceTree = "<group>"; };
+		17F45AF129D030B800214917 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +182,6 @@
 				179A72A129CF67DB00CF9DAD /* Objects */,
 				17F45AEC29D00EE200214917 /* FirebaseUtil */,
 				17F45AD329CFBBDA00214917 /* functions.swift */,
-				17F45ACF29CF8B5400214917 /* sampleData.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -194,8 +189,7 @@
 		179A72A129CF67DB00CF9DAD /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				179A72A329CF67EE00CF9DAD /* profile.swift */,
-				179A72A529CF684500CF9DAD /* goal.swift */,
+				179A72A329CF67EE00CF9DAD /* user.swift */,
 				179A72A729CF6F8600CF9DAD /* lift.swift */,
 			);
 			path = Objects;
@@ -208,7 +202,6 @@
 				17F45AD129CFB14C00214917 /* AddLiftView.swift */,
 				17F45AE429D0009600214917 /* LoginView.swift */,
 				17F45AE529D0009600214917 /* SignupView.swift */,
-				17F45AEA29D00E5C00214917 /* CompleteProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				17F45AE829D000B700214917 /* AuthModel.swift */,
+				17F45AF129D030B800214917 /* DataManager.swift */,
 			);
 			path = FirebaseUtil;
 			sourceTree = "<group>";
@@ -363,17 +357,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17F45AD029CF8B5400214917 /* sampleData.swift in Sources */,
 				17F45AD229CFB14C00214917 /* AddLiftView.swift in Sources */,
-				179A72A629CF684500CF9DAD /* goal.swift in Sources */,
 				179A72A829CF6F8600CF9DAD /* lift.swift in Sources */,
+				17F45AF229D030B800214917 /* DataManager.swift in Sources */,
 				179A72AB29CF78DA00CF9DAD /* LiftPostSubView.swift in Sources */,
 				179A727429CF61A200CF9DAD /* FeedTab.swift in Sources */,
 				17F45AE629D0009600214917 /* LoginView.swift in Sources */,
-				179A72A429CF67EE00CF9DAD /* profile.swift in Sources */,
+				179A72A429CF67EE00CF9DAD /* user.swift in Sources */,
 				17F45AD429CFBBDA00214917 /* functions.swift in Sources */,
 				17F45AE929D000B700214917 /* AuthModel.swift in Sources */,
-				17F45AEB29D00E5C00214917 /* CompleteProfileView.swift in Sources */,
 				179A729E29CF620000CF9DAD /* MapTab.swift in Sources */,
 				179A729C29CF61F400CF9DAD /* ProfileTab.swift in Sources */,
 				17F45AE729D0009600214917 /* SignupView.swift in Sources */,

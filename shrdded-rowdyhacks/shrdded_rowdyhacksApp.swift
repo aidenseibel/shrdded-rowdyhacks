@@ -8,11 +8,10 @@
 import SwiftUI
 import FirebaseCore
 import Firebase
-
+import FirebaseAuth
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     FirebaseApp.configure()
 
     return true
@@ -23,10 +22,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct shrdded_rowdyhacksApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    @State var currentUser: profile = sampleProfiles[0]
+    @StateObject var dataManager = DataManager()
     
+    @State var currentUser: user = user(username: "aseibel", email: "aseibel@trinity.edu", bio: "", dateJoined: Date())
     @StateObject var authModel: AuthModel = AuthModel()
-
     
     var body: some Scene {
         WindowGroup {
@@ -48,6 +47,7 @@ struct shrdded_rowdyhacksApp: App {
             }else{
                 TabView{
                     FeedTab(accountName: currentUser.username)
+                        .environmentObject(dataManager)
                         .tabItem {
                             Label("Feed", systemImage: "house.fill")
                         }
@@ -55,7 +55,7 @@ struct shrdded_rowdyhacksApp: App {
                         .tabItem {
                             Label("Map", systemImage: "map.fill")
                         }
-                    ProfileTab(accountName: currentUser.username, accountBio: currentUser.bio, dateJoined: currentUser.dateJoined, allLifts: sampleLifts, personalRecords: sampleLifts)
+                    ProfileTab(accountName: "placeholder", accountBio: "placeholder", dateJoined: Date(), allLifts: [], personalRecords: [])
                         .tabItem {
                             Label("Profile", systemImage: "figure.mind.and.body")
                         }

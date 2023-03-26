@@ -9,13 +9,14 @@ import SwiftUI
 
 struct FeedTab: View {
     @State var accountName: String
+    @EnvironmentObject var dataManager: DataManager
     
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
-                    ForEach(sampleLifts, id: \.self){ lift in
-                        LiftPostSubView(accountName: accountName, lift: lift)
+                    ForEach(dataManager.lifts, id: \.self){ lift in
+                        LiftPostSubView(lift: lift)
                     }.overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
                 }
                 .padding()

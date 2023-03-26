@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct LiftPostSubView: View {
-    @State var accountName: String
-
     var lift: lift
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
             HStack{
-                Text("\(accountName)")
+                Text("aseibel1")
                     .font(.title2)
                     .bold()
                 Text("posted a new lift")
@@ -55,7 +53,7 @@ struct LiftPostSubView: View {
 
 struct LiftPostSubView_Previews: PreviewProvider {
     static var previews: some View {
-        LiftPostSubView(accountName: "accountName", lift: sampleLifts[0])
+        LiftPostSubView(lift: lift(userID: "", type: "", amount: 0, dateCreated: Date(), isPersonalRecord: false))
             .previewLayout(.sizeThatFits)
     }
 }

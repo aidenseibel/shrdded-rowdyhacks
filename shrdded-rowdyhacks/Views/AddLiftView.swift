@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddLiftView: View {
     @State var accountName: String
-    
+    @EnvironmentObject var dataManager: DataManager
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
@@ -34,6 +34,9 @@ struct AddLiftView: View {
                             Text($0)
                         }
                     }
+                    .padding(EdgeInsets(top: 6, leading: 10, bottom: 6, trailing: 10))
+                    .overlay(RoundedRectangle(cornerRadius: 15).stroke(.gray, lineWidth: 2))
+
                     
                     //MARK: AMOUNT
                     Text("how much did you lift?")
@@ -42,6 +45,7 @@ struct AddLiftView: View {
                         .padding(EdgeInsets(top: 20, leading: 0, bottom: 1, trailing: 5))
                     
                     TextField("0", text: $amountLifted)
+                        .padding()
                         .overlay(RoundedRectangle(cornerRadius: 15).stroke(.gray, lineWidth: 2))
 
                     
@@ -62,6 +66,7 @@ struct AddLiftView: View {
                         .padding(EdgeInsets(top: 20, leading: 0, bottom: 1, trailing: 5))
                     
                     TextField("add a caption", text: $description)
+                        .padding()
                         .overlay(RoundedRectangle(cornerRadius: 15).stroke(.gray, lineWidth: 2))
 
                                         
@@ -81,7 +86,7 @@ struct AddLiftView: View {
                     if amountToInt > 0{
                         if checkIfTextIsAppropriate(input: description){
                             //MARK: ADD FUNCTION
-//                            profile.addLift(type: liftTypeSelected, amount: amountToInt, desc: description)
+                            dataManager.addLift(id: UUID(), type: liftTypeSelected, amount: amountToInt, description: description, isPersonalRecord: true)
                             self.presentationMode.wrappedValue.dismiss()
                         }else{
                             captionIsAppropriate = false
