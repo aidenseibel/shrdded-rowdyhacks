@@ -10,11 +10,13 @@ import SwiftUI
 struct LiftPostSubView: View {
     var lift: lift
     @EnvironmentObject var authModel: AuthModel
+    @EnvironmentObject var dataManager: DataManager
+
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
             HStack{
-                Text("\(authModel.currentUserUsername)")
+                Text("\(getUserFromEmail(email: lift.userEmail).username)")
                     .font(.title2)
                     .bold()
                 Text("posted a new lift")
@@ -50,6 +52,16 @@ struct LiftPostSubView: View {
                 
         }.padding()
     }
+    func getUserFromEmail(email: String) -> user{
+        let users: [user] = dataManager.users
+        for user in users{
+            if user.email == email{
+                return user
+            }
+        }
+        return user(username: "", email: "", bio: "", dateJoined: Date(), friendsByEmail: [])
+    }
+
 }
 
 struct LiftPostSubView_Previews: PreviewProvider {

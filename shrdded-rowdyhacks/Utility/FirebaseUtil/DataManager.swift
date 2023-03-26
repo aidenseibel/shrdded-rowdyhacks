@@ -77,18 +77,18 @@ class DataManager: ObservableObject{
                     let email = data["email"] as? String ?? ""
                     let username = data["username"] as? String ?? ""
                     let bio = data["bio"] as? String ?? ""
+                    let friends = data["friendsByEmail"] as? [String] ?? []
                     
                     let timestamp: Timestamp = document.get("dateJoined") as? Timestamp ?? Timestamp(date: Date.now)
                     
                     let date = timestamp.dateValue()
                     
-                    let user = user(username: username, email: email, bio: bio, dateJoined: date)
+                    let user = user(username: username, email: email, bio: bio, dateJoined: date, friendsByEmail: friends)
                     self.users.append(user)
                 }
             }
         }
     }
-    
     
     func addUser(id: UUID, email: String, username: String, bio: String){
         let db = Firestore.firestore()
@@ -99,24 +99,4 @@ class DataManager: ObservableObject{
             }
         }
     }
-    
-//    func getUserInfo(forUserID: String, handler: @escaping (_ name: String?, _ bio: String?, _ email: String?) -> ()) {
-//        let db = Firestore.firestore()
-//        let ref = db.collection("Users")
-//
-//        ref.document(forUserID).getDocument { (documentSnapshot, error) in
-//            if let document = documentSnapshot,
-//               let name = document.get("username") as? String,
-//               let email = document.get("email") as? String,
-//               let bio = document.get("bio") as? String {
-//                print("Success getting user info")
-//                handler(name, email, bio)
-//                return
-//            } else {
-//                print("Error getting user info")
-//                handler(nil, nil, nil)
-//                return
-//            }
-//        }
-//    }
 }

@@ -32,6 +32,7 @@
 		17F45AE729D0009600214917 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F45AE529D0009600214917 /* SignupView.swift */; };
 		17F45AE929D000B700214917 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F45AE829D000B700214917 /* AuthModel.swift */; };
 		17F45AF229D030B800214917 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F45AF129D030B800214917 /* DataManager.swift */; };
+		17F45AF629D07BB600214917 /* FinalizeAccountCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F45AF529D07BB600214917 /* FinalizeAccountCreation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		17F45AE529D0009600214917 /* SignupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		17F45AE829D000B700214917 /* AuthModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		17F45AF129D030B800214917 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		17F45AF529D07BB600214917 /* FinalizeAccountCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalizeAccountCreation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 				17F45AD129CFB14C00214917 /* AddLiftView.swift */,
 				17F45AE429D0009600214917 /* LoginView.swift */,
 				17F45AE529D0009600214917 /* SignupView.swift */,
+				17F45AF529D07BB600214917 /* FinalizeAccountCreation.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				17F45AD429CFBBDA00214917 /* functions.swift in Sources */,
 				17F45AE929D000B700214917 /* AuthModel.swift in Sources */,
 				179A729E29CF620000CF9DAD /* MapTab.swift in Sources */,
+				17F45AF629D07BB600214917 /* FinalizeAccountCreation.swift in Sources */,
 				179A729C29CF61F400CF9DAD /* ProfileTab.swift in Sources */,
 				17F45AE729D0009600214917 /* SignupView.swift in Sources */,
 				179A727229CF61A200CF9DAD /* shrdded_rowdyhacksApp.swift in Sources */,

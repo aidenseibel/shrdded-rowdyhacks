@@ -14,4 +14,6 @@ class AuthModel: ObservableObject{
     @Published var currentUserUsername: String = ""
     @Published var currentUserBio: String = ""
     @Published var currentUserDateJoined: Date = Date()
+    
+    @Published var needsUserNameAndBio: Bool = true
 }

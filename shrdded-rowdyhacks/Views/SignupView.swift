@@ -15,7 +15,6 @@ struct SignupView: View {
     
     @EnvironmentObject var authModel: AuthModel
     @EnvironmentObject var dataManager: DataManager
-
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20){
@@ -44,7 +43,6 @@ struct SignupView: View {
                 Button(action: {
                     guard !email.isEmpty, !password.isEmpty, !confirmPassword.isEmpty, password == confirmPassword else {return}
                     signup(email: email, password: password, authModel: authModel)
-                    dataManager.addUser(id: UUID(), email: email, username: "noname", bio: "nobio")
                 }, label: {
                     HStack(alignment: .center, spacing: 0){
                         Spacer()

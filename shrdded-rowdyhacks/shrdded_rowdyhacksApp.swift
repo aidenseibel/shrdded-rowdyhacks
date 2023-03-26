@@ -23,9 +23,8 @@ struct shrdded_rowdyhacksApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     @StateObject var dataManager = DataManager()
-        
-    @State var currentUser: user = user(username: "aseibel", email: "aseibel@trinity.edu", bio: "", dateJoined: Date())
     @StateObject var authModel: AuthModel = AuthModel()
+    
     
     var body: some Scene {
         WindowGroup {
@@ -62,6 +61,12 @@ struct shrdded_rowdyhacksApp: App {
                 }
                 .environmentObject(authModel)
                 .environmentObject(dataManager)
+                .sheet(isPresented: $authModel.needsUserNameAndBio, content: {
+                    FinalizeAccountCreation(email: $authModel.currentUserEmail)
+                        .environmentObject(authModel)
+                        .environmentObject(dataManager)
+
+                })
 
                 .onAppear{
                     Auth.auth().addStateDidChangeListener { auth, user in

@@ -16,6 +16,7 @@ struct user: Identifiable, Hashable{
     
     var username, email, bio: String
     var dateJoined: Date
+    var friendsByEmail: [String]
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
