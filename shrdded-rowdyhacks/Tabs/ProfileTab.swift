@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
+import Charts
+
 
 struct ProfileTab: View {
-    @State var dateJoined: Date
-    
     @State var currentDate = Date.now
     
     @EnvironmentObject var authModel: AuthModel
@@ -51,7 +51,7 @@ struct ProfileTab: View {
                             }
                             
                             VStack(alignment: .center){
-                                Text("\(String(format: "%.0f", (currentDate.distance(to: dateJoined)) / -86400))")
+                                Text("\(String(format: "%.0f", (currentDate.distance(to: authModel.currentUserDateJoined)) / -86400))")
                                     .font(.title)
                                     .foregroundColor(.white)
                                     .bold()
@@ -82,12 +82,22 @@ struct ProfileTab: View {
                     Text("progress")
                         .font(.title)
                         .bold()
-                        .padding(EdgeInsets(top: 20, leading: 5, bottom: 5, trailing: 5))
-                    VStack{
-                        Text("Insert charts here")
+                        .padding(EdgeInsets(top: 7, leading: 5, bottom: 5, trailing: 5))
+                    VStack(alignment: .leading){
+                        Chart(getAllLiftsFromEmail(email: authModel.currentUserEmail, lifts: dataManager.lifts)){
+                            LineMark(
+                                x: .value("Month", $0.dateCreated),
+                                y: .value("lbs", $0.amount)
+                            )
+                            .foregroundStyle(by: .value("Lift", $0.type))
+                        }
+                        .padding(8)
+                        .background(.black)
+                        .cornerRadius(6)
+
                     }
                     .padding(15)
-                    .background(.gray)
+                    .background(Color("darkgreen"))
                     .cornerRadius(10)
                     
                     
@@ -97,7 +107,7 @@ struct ProfileTab: View {
                         .bold()
                         .padding(EdgeInsets(top: 20, leading: 5, bottom: 5, trailing: 5))
                     VStack{
-                        ForEach(getAllLiftsFromEmail(email: authModel.currentUserEmail, lifts: dataManager.lifts)) { lift in
+                        ForEach(sortLiftArrayByTimeWithEarliestFirst(lifts: getAllLiftsFromEmail(email: authModel.currentUserEmail, lifts: dataManager.lifts)).reversed()) { lift in
                             NavigationLink(destination: LiftPostSubView(lift: lift)){
                                 VStack(alignment: .leading, spacing: 10){
                                     HStack{
@@ -138,6 +148,6 @@ struct ProfileTab: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileTab(dateJoined: Date(timeIntervalSinceNow: -200000))
+        ProfileTab()
     }
 }

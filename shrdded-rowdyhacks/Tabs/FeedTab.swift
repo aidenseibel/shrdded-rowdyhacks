@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct FeedTab: View {
-    @State var accountName: String
     @EnvironmentObject var dataManager: DataManager
+    @EnvironmentObject var authModel: AuthModel
     
     var body: some View {
         NavigationView {
@@ -21,7 +21,7 @@ struct FeedTab: View {
                         Text("refresh feed")
                     }
 
-                    ForEach(dataManager.lifts, id: \.self){ lift in
+                    ForEach(sortLiftArrayByTimeWithEarliestFirst(lifts: dataManager.lifts).reversed(), id: \.self){ lift in
                         LiftPostSubView(lift: lift)
                     }.overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
                 }
@@ -32,7 +32,7 @@ struct FeedTab: View {
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {
-                        AddLiftView(accountName: accountName)
+                        AddLiftView()
                     } label: {
                         Text("add lift")
                             .font(.custom("System", size: 14))
@@ -49,7 +49,7 @@ struct FeedTab: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedTab(accountName: "accountName")
+        FeedTab()
     }
 }
 

@@ -47,7 +47,7 @@ struct shrdded_rowdyhacksApp: App {
                     .environmentObject(dataManager)
             }else{
                 TabView{
-                    FeedTab(accountName: currentUser.username)
+                    FeedTab()
                         .tabItem {
                             Label("Feed", systemImage: "house.fill")
                         }
@@ -55,7 +55,7 @@ struct shrdded_rowdyhacksApp: App {
 //                        .tabItem {
 //                            Label("Map", systemImage: "map.fill")
 //                        }
-                    ProfileTab(dateJoined: Date())
+                    ProfileTab()
                         .tabItem {
                             Label("Profile", systemImage: "figure.mind.and.body")
                         }
@@ -74,6 +74,7 @@ struct shrdded_rowdyhacksApp: App {
                                 if user.email == authModel.currentUserEmail{
                                     authModel.currentUserUsername = user.username
                                     authModel.currentUserBio = user.bio
+                                    authModel.currentUserDateJoined = user.dateJoined
                                 }
                             }
                         }

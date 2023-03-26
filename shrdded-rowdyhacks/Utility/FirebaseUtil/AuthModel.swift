@@ -13,4 +13,5 @@ class AuthModel: ObservableObject{
     @Published var currentUserEmail: String = ""
     @Published var currentUserUsername: String = ""
     @Published var currentUserBio: String = ""
+    @Published var currentUserDateJoined: Date = Date()
 }

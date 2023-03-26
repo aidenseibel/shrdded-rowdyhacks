@@ -74,3 +74,20 @@ func getAllLiftsOfTypeFromEmail(email: String, liftType: String, lifts: [lift]) 
     }
     return allLiftsOfType
 }
+
+func sortLiftArrayByTimeWithEarliestFirst(lifts: [lift]) ->[lift]{
+    var arr: [lift] = lifts
+    arr.sort{
+        $0.dateCreated < $1.dateCreated
+    }
+    return arr
+}
+
+func returnFirstFiveInArray(arr: [Any]) -> [Any]{
+    if arr.count < 5{
+        return arr
+    }else {
+        return Array(arr[0..<5])
+        
+    }
+}

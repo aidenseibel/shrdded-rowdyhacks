@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AddLiftView: View {
-    @State var accountName: String
     @EnvironmentObject var dataManager: DataManager
     @EnvironmentObject var authModel: AuthModel
 
@@ -120,6 +119,6 @@ struct AddLiftView: View {
 
 struct AddLiftView_Previews: PreviewProvider {
     static var previews: some View {
-        AddLiftView(accountName: "accountName")
+        AddLiftView()
     }
 }
