@@ -41,7 +41,7 @@ struct SignupView: View {
                 //MARK: SUBMIT BUTTON
                 Button(action: {
                     guard !email.isEmpty, !password.isEmpty, !confirmPassword.isEmpty, password == confirmPassword else {return}
-                    AuthService.signup(email: email, password: password, authModel: authModel)
+                    signup(email: email, password: password, authModel: authModel)
                 }, label: {
                     HStack(alignment: .center, spacing: 0){
                         Spacer()
@@ -57,6 +57,16 @@ struct SignupView: View {
             }
         }
         .padding()
+    }
+    
+    func signup(email: String, password: String, authModel: AuthModel){
+        Auth.auth().createUser(withEmail: email, password: password){ result, error in
+            if error != nil {
+                print(error!.localizedDescription)
+            }else{
+                authModel.isLoggedIn = true
+            }
+        }
     }
     
 }

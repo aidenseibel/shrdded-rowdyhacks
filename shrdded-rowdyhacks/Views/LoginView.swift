@@ -38,7 +38,7 @@ struct LoginView: View {
             Button(action: {
                 guard !email.isEmpty, !password.isEmpty else {return}
                 
-                AuthService.login(email: email, password: password, authModel: authModel)
+                login(email: email, password: password, authModel: authModel)
                 
             }, label: {
                 HStack(alignment: .center, spacing: 0){
@@ -55,6 +55,16 @@ struct LoginView: View {
             
         }
         .padding()
+    }
+    
+    func login(email: String, password: String, authModel: AuthModel){
+        Auth.auth().signIn(withEmail: email, password: password){ result, error in
+            if error != nil {
+                print(error!.localizedDescription)
+            }else{
+                authModel.isLoggedIn = true
+            }
+        }
     }
 }
 
