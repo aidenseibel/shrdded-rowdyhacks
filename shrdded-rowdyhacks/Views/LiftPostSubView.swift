@@ -45,7 +45,7 @@ struct LiftPostSubView: View {
                     .padding(.bottom, 3)
             }
             if (lift.description != nil){
-                Text("\(lift.description ?? "")!")
+                Text("\(lift.description ?? "")")
             }
                 
         }.padding()

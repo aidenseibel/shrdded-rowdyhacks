@@ -55,8 +55,7 @@ struct shrdded_rowdyhacksApp: App {
 //                        .tabItem {
 //                            Label("Map", systemImage: "map.fill")
 //                        }
-                    ProfileTab(dateJoined: Date(), allLifts: [], personalRecords: [])
-
+                    ProfileTab(dateJoined: Date())
                         .tabItem {
                             Label("Profile", systemImage: "figure.mind.and.body")
                         }

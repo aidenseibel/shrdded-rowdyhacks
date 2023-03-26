@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ProfileTab: View {
     @State var dateJoined: Date
-    @State var allLifts: [lift]
-    @State var personalRecords: [lift]
     
     @State var currentDate = Date.now
     
@@ -24,11 +22,21 @@ struct ProfileTab: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
-                    
+                    Button {
+                        for user in dataManager.users{
+                            if user.email == authModel.currentUserEmail{
+                                authModel.currentUserUsername = user.username
+                                authModel.currentUserBio = user.bio
+                            }
+                        }
+                    } label: {
+                        Text("refresh profile")
+                    }
+
                     //MARK: LAZY HSTACK
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack(alignment: .top, spacing: 20){
-                            ForEach(personalRecords, id: \.self) { pr in
+                            ForEach(getAllPRsFromEmail(email: authModel.currentUserEmail, lifts: dataManager.lifts), id: \.self) { pr in
                                 VStack(alignment: .center){
                                     Text("\(pr.amount)")
                                         .font(.title)
@@ -130,6 +138,6 @@ struct ProfileTab: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileTab(dateJoined: Date(timeIntervalSinceNow: -200000), allLifts: [], personalRecords: [])
+        ProfileTab(dateJoined: Date(timeIntervalSinceNow: -200000))
     }
 }
