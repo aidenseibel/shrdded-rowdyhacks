@@ -20,6 +20,7 @@ struct LiftPostSubView: View {
                     .bold()
                 Text("posted a new lift")
                     .foregroundColor(Color("darkgrey"))
+                    .lineLimit(1)
                 Spacer()
                 Text("\(getTimeSinceNow(from: lift.date))")
                     .foregroundColor(Color("darkgrey"))

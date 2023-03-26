@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ProfileTab: View {
-    var profile: profile
+    @State var profile: profile
+    
     @State var currentDate = Date.now
     var separationBetweenLazyHStackElements: Double = 0.25
-    var colorOfElementsInLazyHStack: String = "darkgrey"
+    var colorOfElementsInLazyHStack: String = "darkergreen"
     
     var body: some View {
         NavigationView {
@@ -26,7 +27,8 @@ struct ProfileTab: View {
                                     .font(.title)
                                     .foregroundColor(.white)
                                     .bold()
-                                Text("weight")                                    .foregroundColor(.white)
+                                Text("weight")
+                                    .foregroundColor(.white)
                             }
                             .frame(width: UIScreen.main.bounds.width * separationBetweenLazyHStackElements, height: UIScreen.main.bounds.width * separationBetweenLazyHStackElements * 0.7)                                .background(Color(colorOfElementsInLazyHStack))
                                 .cornerRadius(10)
@@ -37,6 +39,7 @@ struct ProfileTab: View {
                                     .foregroundColor(.white)
                                     .bold()
                                 Text("days on app")
+                                    .font(.custom("System", size: 14))
                                     .foregroundColor(.white)
 
                             }
@@ -61,7 +64,7 @@ struct ProfileTab: View {
                         }
                     }
                     .padding(15)
-                    .background(.gray)
+                    .background(Color("darkgreen"))
                     .cornerRadius(10)
                     
                     // MARK: PROFILE DESCRIPTION
@@ -93,14 +96,35 @@ struct ProfileTab: View {
                         .padding(EdgeInsets(top: 20, leading: 5, bottom: 5, trailing: 5))
                     VStack{
                         ForEach(profile.lifts) { lift in
-                            LiftPostSubView(profile: profile, lift: lift)
+                            NavigationLink(destination: LiftPostSubView(profile: profile, lift: lift)){
+                                VStack(alignment: .leading, spacing: 10){
+                                    HStack{
+                                        Text("\(getTimeSinceNow(from: lift.date))")
+                                            .foregroundColor(Color("darkgrey"))
+                                            .font(.custom("System", size: 14))
+                                        Spacer()
+                                    }
+                                    if lift.isPersonalRecord{
+                                        Text("Personal Record!")
+                                            .font(.custom("System", size: 14))
+                                            .padding(3)
+                                            .background(Color("darkgreen"))
+                                            .cornerRadius(3)
+                                            .foregroundColor(.white)
+                                    }
+                                    HStack(alignment: .bottom){
+                                        Text("\(lift.amount)")
+                                            .font(.custom("System", size: 36))
+                                            .bold()
+                                        Text("\(lift.type)")
+                                            .font(.custom("System", size: 24))
+                                            .padding(.bottom, 3)
+                                    }
+                                }.padding()
+                                    .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
+                            }.buttonStyle(.plain)
                         }
                     }
-                    .padding(15)
-                    .background(.gray)
-                    .cornerRadius(10)
-
-                    
                 }
                 .padding()
             }

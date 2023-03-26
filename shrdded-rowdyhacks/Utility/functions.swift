@@ -40,7 +40,6 @@ func getCurrentPersonalRecordLiftFromLiftType(account: profile, liftType: String
             maxLift = lift
         }
     }
-    
     return maxLift
 }
 
@@ -77,4 +76,9 @@ func getTimeSinceNow(from: Date) -> String{
         return "\(String(format: "%.0f", intervalBetweenTimes / 86400)) days ago"
     }
     return ""
+}
+
+
+func checkIfTextIsAppropriate(input: String) -> Bool{
+    return true
 }

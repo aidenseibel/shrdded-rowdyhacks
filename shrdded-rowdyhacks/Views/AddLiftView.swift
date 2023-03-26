@@ -9,11 +9,15 @@ import SwiftUI
 
 struct AddLiftView: View {
     @State var profile: profile
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     let liftTypes: [String] = ["bench","squat","deadlift"]
     @State private var liftTypeSelected = "bench"
     @State private var amountLifted = ""
     @State private var description = ""
+    
+    @State private var weightIsValid = true
+    @State private var captionIsAppropriate = true
         
     var body: some View {
         VStack{
@@ -22,41 +26,75 @@ struct AddLiftView: View {
                     Text("select lift type")
                         .font(.title)
                         .bold()
-                        .padding(EdgeInsets(top: 20, leading: 5, bottom: 1, trailing: 5))
+                        .padding(EdgeInsets(top: 20, leading: 0, bottom: 1, trailing: 5))
                     Picker("select lift type", selection: $liftTypeSelected){
                         ForEach(liftTypes, id: \.self){
                             Text($0)
                         }
                     }
                     
-                    
                     //MARK: AMOUNT
                     Text("how much did you lift?")
                         .font(.title)
                         .bold()
-                        .padding(EdgeInsets(top: 20, leading: 5, bottom: 1, trailing: 5))
+                        .padding(EdgeInsets(top: 20, leading: 0, bottom: 1, trailing: 5))
                     
                     TextField("0", text: $amountLifted)
                     
+                    if !weightIsValid{
+                        Text("Enter a valid weight! (No decimals)")
+                            .padding(3)
+                            .background(Color("darkgreen"))
+                            .cornerRadius(3)
+                            .foregroundColor(.white)
+                            .padding(.top, 10)
+                    }
+
                     
                     //MARK: DESCRIPTION
                     Text("any comments?")
                         .font(.title)
                         .bold()
-                        .padding(EdgeInsets(top: 20, leading: 5, bottom: 1, trailing: 5))
+                        .padding(EdgeInsets(top: 20, leading: 0, bottom: 1, trailing: 5))
                     
                     TextField("add a caption", text: $description)
                                         
-                    
+                    if !captionIsAppropriate{
+                        Text("Caption is inappropriate!")
+                            .padding(3)
+                            .background(Color("darkgreen"))
+                            .cornerRadius(3)
+                            .foregroundColor(.white)
+                            .padding(.top, 10)
+                    }
                     
                 }.padding()
             }
             Button {
-                
+                if let amountToInt = Int(amountLifted){
+                    if amountToInt > 0{
+                        if checkIfTextIsAppropriate(input: description){
+                            profile.addLift(type: liftTypeSelected, amount: amountToInt, desc: description)
+                            self.presentationMode.wrappedValue.dismiss()
+                        }else{
+                            captionIsAppropriate = false
+                        }
+                    }else{
+                        weightIsValid = false
+                    }
+                }else{
+                    weightIsValid = false
+                }
             } label: {
-                Text("Add lift")
+                Text("add lift")
+                    .frame(width: UIScreen.main.bounds.width * 0.95, height: UIScreen.main.bounds.width * 0.15)
+                    .foregroundColor(.white)
+                    .bold()
+                    .background(Color("darkgreen"))
+                    .cornerRadius(10)
                 
             }
+            .buttonStyle(.plain)
             .padding(10)
             
         }
