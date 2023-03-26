@@ -32,8 +32,17 @@ struct shrdded_rowdyhacksApp: App {
         WindowGroup {
             if !authModel.isLoggedIn{
                 ScrollView{
-                    LoginView()
-                    SignupView()
+                    VStack(alignment: .leading) {
+                        Text("welcome to shrdded")
+                            .font(.largeTitle)
+                            .bold()
+                            .padding(EdgeInsets(top: 10, leading: 10, bottom: 1, trailing: 1))
+                        Text("it's nice to have you")
+                            .font(.title3)
+                            .padding(EdgeInsets(top: 1, leading: 10, bottom: 1, trailing: 1))
+                        LoginView()
+                        SignupView()
+                    }
                 }
                     .environmentObject(authModel)
             }else{

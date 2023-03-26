@@ -42,6 +42,8 @@ struct AddLiftView: View {
                         .padding(EdgeInsets(top: 20, leading: 0, bottom: 1, trailing: 5))
                     
                     TextField("0", text: $amountLifted)
+                        .overlay(RoundedRectangle(cornerRadius: 15).stroke(.gray, lineWidth: 2))
+
                     
                     if !weightIsValid{
                         Text("Enter a valid weight! (No decimals)")
@@ -60,6 +62,8 @@ struct AddLiftView: View {
                         .padding(EdgeInsets(top: 20, leading: 0, bottom: 1, trailing: 5))
                     
                     TextField("add a caption", text: $description)
+                        .overlay(RoundedRectangle(cornerRadius: 15).stroke(.gray, lineWidth: 2))
+
                                         
                     if !captionIsAppropriate{
                         Text("Caption is inappropriate!")

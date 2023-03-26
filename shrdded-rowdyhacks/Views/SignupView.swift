@@ -17,22 +17,22 @@ struct SignupView: View {
         
     var body: some View {
         VStack(alignment: .leading, spacing: 20){
-            Text("Signup")
-                .font(.largeTitle)
+            Text("signup")
+                .font(.title)
                 .bold()
             
             VStack(alignment: .leading, spacing: 10){
-                TextField("Email", text: $email)
+                TextField("email", text: $email)
                     .textInputAutocapitalization(.never)
                     .disableAutocorrection(true)
                     .padding()
                     .overlay(RoundedRectangle(cornerRadius: 15).stroke(.gray, lineWidth: 2))
-                SecureField("Password", text: $password)
+                SecureField("password", text: $password)
                     .textInputAutocapitalization(.never)
                     .disableAutocorrection(true)
                     .padding()
                     .overlay(RoundedRectangle(cornerRadius: 15).stroke(.gray, lineWidth: 2))
-                SecureField("Confirm Password", text: $confirmPassword)
+                SecureField("confirm password", text: $confirmPassword)
                     .textInputAutocapitalization(.never)
                     .disableAutocorrection(true)
                     .padding()
@@ -41,11 +41,11 @@ struct SignupView: View {
                 //MARK: SUBMIT BUTTON
                 Button(action: {
                     guard !email.isEmpty, !password.isEmpty, !confirmPassword.isEmpty, password == confirmPassword else {return}
-                    signup(email: email, password: password)
+                    AuthService.signup(email: email, password: password, authModel: authModel)
                 }, label: {
                     HStack(alignment: .center, spacing: 0){
                         Spacer()
-                        Text("Submit")
+                        Text("submit")
                            .foregroundColor(.white)
                            .bold()
                            .padding()
@@ -59,15 +59,6 @@ struct SignupView: View {
         .padding()
     }
     
-    func signup(email: String, password: String){
-        Auth.auth().createUser(withEmail: email, password: password){ result, error in
-            if error != nil {
-                print(error!.localizedDescription)
-            }else{
-                authModel.isLoggedIn = true
-            }
-        }
-    }
 }
 
 struct SignupView_Previews: PreviewProvider {

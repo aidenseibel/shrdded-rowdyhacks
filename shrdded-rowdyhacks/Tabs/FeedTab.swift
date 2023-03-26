@@ -16,27 +16,23 @@ struct FeedTab: View {
                 VStack(alignment: .leading) {
                     ForEach(sampleLifts, id: \.self){ lift in
                         LiftPostSubView(accountName: accountName, lift: lift)
-
                     }.overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
-                    
-                    
                 }
                 .padding()
             }
-            .navigationTitle(feedTabHeaders.randomElement() ?? "Have a great day")
+            .navigationTitle(feedTabHeaders.randomElement() ?? "have a great day")
             .navigationBarTitleDisplayMode(.large)
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {
                         AddLiftView(accountName: accountName)
                     } label: {
-                        Text("Add Lift")
+                        Text("add lift")
                             .font(.custom("System", size: 14))
                             .padding(10)
                             .background(Color("darkgreen"))
                             .cornerRadius(3)
                             .foregroundColor(.white)
-
                     }.buttonStyle(.plain)
                 }
             }

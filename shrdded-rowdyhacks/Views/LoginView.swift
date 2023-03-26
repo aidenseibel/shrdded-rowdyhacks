@@ -16,17 +16,17 @@ struct LoginView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20){
-            Text("Login")
-                .font(.largeTitle)
+            Text("login")
+                .font(.title)
                 .bold()
             
             VStack{
-                TextField("Email", text: $email)
+                TextField("email", text: $email)
                     .textInputAutocapitalization(.never)
                     .disableAutocorrection(true)
                     .padding()
                     .overlay(RoundedRectangle(cornerRadius: 15).stroke(.gray, lineWidth: 2))
-                SecureField("Password", text: $password)
+                SecureField("password", text: $password)
                     .textInputAutocapitalization(.never)
                     .disableAutocorrection(true)
                     .padding()
@@ -38,12 +38,12 @@ struct LoginView: View {
             Button(action: {
                 guard !email.isEmpty, !password.isEmpty else {return}
                 
-                login(email: email, password: password)
+                AuthService.login(email: email, password: password, authModel: authModel)
                 
             }, label: {
                 HStack(alignment: .center, spacing: 0){
                     Spacer()
-                    Text("Submit")
+                    Text("submit")
                        .foregroundColor(.white)
                        .bold()
                        .padding()
@@ -55,16 +55,6 @@ struct LoginView: View {
             
         }
         .padding()
-    }
-    
-    func login(email: String, password: String){
-        Auth.auth().signIn(withEmail: email, password: password){ result, error in
-            if error != nil {
-                print(error!.localizedDescription)
-            }else{
-                authModel.isLoggedIn = true
-            }
-        }
     }
 }
 
