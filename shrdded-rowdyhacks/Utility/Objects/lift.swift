@@ -15,12 +15,11 @@ struct lift: Identifiable, Hashable{
     
     var id = UUID()
     
-    var userID: String
+    var userEmail: String
     
     var type: String
     var amount: Int
     var dateCreated: Date
-    var isPersonalRecord: Bool
     var description: String?
     
     func hash(into hasher: inout Hasher) {

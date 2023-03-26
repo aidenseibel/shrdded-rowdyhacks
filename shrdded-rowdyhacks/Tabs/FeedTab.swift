@@ -15,6 +15,12 @@ struct FeedTab: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
+                    Button {
+                        dataManager.fetchLifts()
+                    } label: {
+                        Text("refresh feed")
+                    }
+
                     ForEach(dataManager.lifts, id: \.self){ lift in
                         LiftPostSubView(lift: lift)
                     }.overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))

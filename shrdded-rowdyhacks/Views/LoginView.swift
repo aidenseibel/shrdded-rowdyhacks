@@ -13,6 +13,7 @@ struct LoginView: View {
     @State private var password: String = ""
     
     @EnvironmentObject var authModel: AuthModel
+    @EnvironmentObject var dataManager: DataManager
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20){

@@ -31,22 +31,23 @@ class DataManager: ObservableObject{
                 for document in snapshot.documents{
                     let data = document.data()
                     
+
                     let type = data["type"] as? String ?? ""
                     let amount = data["amount"] as? Int ?? 0
-                    let isPersonalRecord = data["isPersonalRecord"] as? Bool ?? false
+                    let userEmail = data["userEmail"] as? String ?? ""
                     let description = data["description"] as? String ?? ""
                     
-                    let lift = lift(userID: "", type: type, amount: amount, dateCreated: Date(), isPersonalRecord: isPersonalRecord)
+                    let lift = lift(userEmail: userEmail, type: type, amount: amount, dateCreated: Date(), description: description)
                     self.lifts.append(lift)
                 }
             }
         }
     }
     
-    func addLift(id: UUID, type: String, amount: Int, description: String, isPersonalRecord: Bool){
+    func addLift(id: UUID, type: String, amount: Int, description: String, userEmail: String){
         let db = Firestore.firestore()
         let ref = db.collection("Lifts").document(id.uuidString)
-        ref.setData(["type" : type, "amount": amount, "description": description, "isPersonalRecord": isPersonalRecord]){ error in
+        ref.setData(["type" : type, "amount": amount, "description": description, "userEmail": userEmail]){ error in
             if let error = error{
                 print(error.localizedDescription)
             }
@@ -78,7 +79,7 @@ class DataManager: ObservableObject{
             }
         }
     }
-
+    
     
     func addUser(id: UUID, email: String, username: String, bio: String){
         let db = Firestore.firestore()
@@ -87,7 +88,26 @@ class DataManager: ObservableObject{
             if let error = error{
                 print(error.localizedDescription)
             }
-            
         }
     }
+    
+//    func getUserInfo(forUserID: String, handler: @escaping (_ name: String?, _ bio: String?, _ email: String?) -> ()) {
+//        let db = Firestore.firestore()
+//        let ref = db.collection("Users")
+//
+//        ref.document(forUserID).getDocument { (documentSnapshot, error) in
+//            if let document = documentSnapshot,
+//               let name = document.get("username") as? String,
+//               let email = document.get("email") as? String,
+//               let bio = document.get("bio") as? String {
+//                print("Success getting user info")
+//                handler(name, email, bio)
+//                return
+//            } else {
+//                print("Error getting user info")
+//                handler(nil, nil, nil)
+//                return
+//            }
+//        }
+//    }
 }

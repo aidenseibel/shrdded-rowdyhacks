@@ -24,3 +24,13 @@ func getTimeSinceNow(from: Date) -> String{
 func checkIfTextIsAppropriate(input: String) -> Bool{
     return true
 }
+
+func getAllLiftsFromEmail(email: String, lifts: [lift]) -> [lift]{
+    var allLifts: [lift] = []
+    for everyLift in lifts{
+        if everyLift.userEmail == email{
+            allLifts.append(everyLift)
+        }
+    }
+    return allLifts
+}

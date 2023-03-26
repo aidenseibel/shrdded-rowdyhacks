@@ -9,11 +9,12 @@ import SwiftUI
 
 struct LiftPostSubView: View {
     var lift: lift
+    @EnvironmentObject var authModel: AuthModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
             HStack{
-                Text("aseibel1")
+                Text("\(authModel.currentUserUsername)")
                     .font(.title2)
                     .bold()
                 Text("posted a new lift")
@@ -26,14 +27,14 @@ struct LiftPostSubView: View {
 
 
             }
-            if lift.isPersonalRecord{
-                Text("Personal Record!")
-                    .font(.custom("System", size: 14))
-                    .padding(3)
-                    .background(Color("darkgreen"))
-                    .cornerRadius(3)
-                    .foregroundColor(.white)
-            }
+//            if lift.isPersonalRecord{
+//                Text("Personal Record!")
+//                    .font(.custom("System", size: 14))
+//                    .padding(3)
+//                    .background(Color("darkgreen"))
+//                    .cornerRadius(3)
+//                    .foregroundColor(.white)
+//            }
             
             HStack(alignment: .bottom){
                 Text("\(lift.amount)")
@@ -53,7 +54,7 @@ struct LiftPostSubView: View {
 
 struct LiftPostSubView_Previews: PreviewProvider {
     static var previews: some View {
-        LiftPostSubView(lift: lift(userID: "", type: "", amount: 0, dateCreated: Date(), isPersonalRecord: false))
+        LiftPostSubView(lift: lift(userEmail: "", type: "", amount: 0, dateCreated: Date()))
             .previewLayout(.sizeThatFits)
     }
 }

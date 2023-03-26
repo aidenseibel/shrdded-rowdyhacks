@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ProfileTab: View {
-    @State var accountName: String
-    @State var accountBio: String
     @State var dateJoined: Date
     @State var allLifts: [lift]
     @State var personalRecords: [lift]
     
     @State var currentDate = Date.now
+    
+    @EnvironmentObject var authModel: AuthModel
+    @EnvironmentObject var dataManager: DataManager
+    
     var separationBetweenLazyHStackElements: Double = 0.25
     var colorOfElementsInLazyHStack: String = "darkergreen"
     
@@ -64,7 +66,7 @@ struct ProfileTab: View {
                         .font(.title)
                         .bold()
                         .padding(EdgeInsets(top: 20, leading: 5, bottom: 1, trailing: 5))
-                    Text("\(accountBio)")
+                    Text("\(authModel.currentUserBio)")
                         .padding(5)
 
                     
@@ -87,7 +89,7 @@ struct ProfileTab: View {
                         .bold()
                         .padding(EdgeInsets(top: 20, leading: 5, bottom: 5, trailing: 5))
                     VStack{
-                        ForEach(allLifts) { lift in
+                        ForEach(getAllLiftsFromEmail(email: authModel.currentUserEmail, lifts: dataManager.lifts)) { lift in
                             NavigationLink(destination: LiftPostSubView(lift: lift)){
                                 VStack(alignment: .leading, spacing: 10){
                                     HStack{
@@ -96,14 +98,14 @@ struct ProfileTab: View {
                                             .font(.custom("System", size: 14))
                                         Spacer()
                                     }
-                                    if lift.isPersonalRecord{
-                                        Text("Personal Record!")
-                                            .font(.custom("System", size: 14))
-                                            .padding(3)
-                                            .background(Color("darkgreen"))
-                                            .cornerRadius(3)
-                                            .foregroundColor(.white)
-                                    }
+//                                    if lift.isPersonalRecord{
+//                                        Text("Personal Record!")
+//                                            .font(.custom("System", size: 14))
+//                                            .padding(3)
+//                                            .background(Color("darkgreen"))
+//                                            .cornerRadius(3)
+//                                            .foregroundColor(.white)
+//                                    }
                                     HStack(alignment: .bottom){
                                         Text("\(lift.amount)")
                                             .font(.custom("System", size: 36))
@@ -120,7 +122,7 @@ struct ProfileTab: View {
                 }
                 .padding()
             }
-            .navigationTitle("\(accountName)")
+            .navigationTitle("\(authModel.currentUserUsername)")
             .navigationBarTitleDisplayMode(.large)
         }
     }
@@ -128,6 +130,6 @@ struct ProfileTab: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileTab(accountName: "accountName", accountBio: "fake bio", dateJoined: Date(timeIntervalSinceNow: -200000), allLifts: [], personalRecords: [])
+        ProfileTab(dateJoined: Date(timeIntervalSinceNow: -200000), allLifts: [], personalRecords: [])
     }
 }

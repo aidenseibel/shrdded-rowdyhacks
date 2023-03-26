@@ -10,6 +10,8 @@ import SwiftUI
 struct AddLiftView: View {
     @State var accountName: String
     @EnvironmentObject var dataManager: DataManager
+    @EnvironmentObject var authModel: AuthModel
+
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
@@ -86,7 +88,7 @@ struct AddLiftView: View {
                     if amountToInt > 0{
                         if checkIfTextIsAppropriate(input: description){
                             //MARK: ADD FUNCTION
-                            dataManager.addLift(id: UUID(), type: liftTypeSelected, amount: amountToInt, description: description, isPersonalRecord: true)
+                            dataManager.addLift(id: UUID(), type: liftTypeSelected, amount: amountToInt, description: description, userEmail: authModel.currentUserEmail)
                             self.presentationMode.wrappedValue.dismiss()
                         }else{
                             captionIsAppropriate = false

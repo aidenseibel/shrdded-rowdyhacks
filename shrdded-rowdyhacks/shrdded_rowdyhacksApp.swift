@@ -23,7 +23,7 @@ struct shrdded_rowdyhacksApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     @StateObject var dataManager = DataManager()
-    
+        
     @State var currentUser: user = user(username: "aseibel", email: "aseibel@trinity.edu", bio: "", dateJoined: Date())
     @StateObject var authModel: AuthModel = AuthModel()
     
@@ -44,34 +44,43 @@ struct shrdded_rowdyhacksApp: App {
                     }
                 }
                     .environmentObject(authModel)
+                    .environmentObject(dataManager)
             }else{
                 TabView{
                     FeedTab(accountName: currentUser.username)
-                        .environmentObject(dataManager)
                         .tabItem {
                             Label("Feed", systemImage: "house.fill")
                         }
-                    MapTab()
-                        .tabItem {
-                            Label("Map", systemImage: "map.fill")
-                        }
-                    ProfileTab(accountName: "placeholder", accountBio: "placeholder", dateJoined: Date(), allLifts: [], personalRecords: [])
+//                    MapTab()
+//                        .tabItem {
+//                            Label("Map", systemImage: "map.fill")
+//                        }
+                    ProfileTab(dateJoined: Date(), allLifts: [], personalRecords: [])
+
                         .tabItem {
                             Label("Profile", systemImage: "figure.mind.and.body")
                         }
                 }
                 .environmentObject(authModel)
+                .environmentObject(dataManager)
+
                 .onAppear{
                     Auth.auth().addStateDidChangeListener { auth, user in
                         if user != nil{
                             authModel.isLoggedIn = true
                             print(authModel.isLoggedIn)
                             print(user?.email ?? "User not signed in.")
+                            authModel.currentUserEmail = user?.email ?? "no email"
+                            for user in dataManager.users{
+                                if user.email == authModel.currentUserEmail{
+                                    authModel.currentUserUsername = user.username
+                                    authModel.currentUserBio = user.bio
+                                }
+                            }
                         }
                     }
                 }
             }
-
         }
     }
 }
