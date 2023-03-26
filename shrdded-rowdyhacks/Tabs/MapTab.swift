@@ -27,7 +27,7 @@ struct MapTab: View {
         NavigationView {
             ZStack(alignment: .top){
                 if textFieldIsFocused{
-                    ShowSearchResults()
+                    ShowSearchResults(searchString: $searchText)
                 }else{
                     Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: annotations){
                         MapMarker(coordinate: $0.coordinate)
@@ -65,11 +65,14 @@ struct MapTab: View {
                             .cornerRadius(15)
                             .overlay(RoundedRectangle(cornerRadius: 15).stroke(.gray, lineWidth: 2))
                             .padding()
+                            .disableAutocorrection(true)
+                            .textInputAutocapitalization(.never)
 
                         Button {
                             textFieldIsFocused = false
                         } label: {
                             Text("dismiss")
+                                .font(.custom("System", size: 12))
                                 .padding()
                                 .background(Color("darkgreen"))
                                 .foregroundColor(.white)

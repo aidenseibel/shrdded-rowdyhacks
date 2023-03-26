@@ -69,6 +69,8 @@ struct AddLiftView: View {
                     TextField("add a caption", text: $description)
                         .padding()
                         .overlay(RoundedRectangle(cornerRadius: 15).stroke(.gray, lineWidth: 2))
+                        .disableAutocorrection(true)
+
 
                                         
                     if !captionIsAppropriate{

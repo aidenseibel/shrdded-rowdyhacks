@@ -19,6 +19,7 @@ struct LiftPostSubView: View {
                 Text("\(getUserFromEmail(email: lift.userEmail).username)")
                     .font(.title2)
                     .bold()
+                    .lineLimit(1)
                 Text("posted a new lift")
                     .foregroundColor(Color("darkgrey"))
                     .lineLimit(1)
@@ -29,14 +30,14 @@ struct LiftPostSubView: View {
 
 
             }
-//            if lift.isPersonalRecord{
-//                Text("Personal Record!")
-//                    .font(.custom("System", size: 14))
-//                    .padding(3)
-//                    .background(Color("darkgreen"))
-//                    .cornerRadius(3)
-//                    .foregroundColor(.white)
-//            }
+            if getAllPRsFromEmail(email: lift.userEmail, lifts: dataManager.lifts).contains(self.lift){
+                Text("Personal Record!")
+                    .font(.custom("System", size: 14))
+                    .padding(3)
+                    .background(Color("darkgreen"))
+                    .cornerRadius(3)
+                    .foregroundColor(.white)
+            }
             
             HStack(alignment: .bottom){
                 Text("\(lift.amount)")

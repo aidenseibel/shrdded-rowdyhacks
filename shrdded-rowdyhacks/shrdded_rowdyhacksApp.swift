@@ -81,6 +81,7 @@ struct shrdded_rowdyhacksApp: App {
                                     authModel.currentUserUsername = user.username
                                     authModel.currentUserBio = user.bio
                                     authModel.currentUserDateJoined = user.dateJoined
+                                    authModel.currentUserFriends = user.friendsByEmail
                                 }
                             }
                         }

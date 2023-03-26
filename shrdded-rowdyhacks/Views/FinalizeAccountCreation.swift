@@ -34,8 +34,10 @@ struct FinalizeAccountCreation: View {
                     TextField("enter a username", text: $usernameText)
                         .padding()
                         .overlay(RoundedRectangle(cornerRadius: 15).stroke(.gray, lineWidth: 2))
+                        .disableAutocorrection(true)
 
-                    Text("bio?")
+
+                    Text("bio")
                         .font(.title)
                         .bold()
                         .padding(EdgeInsets(top: 20, leading: 0, bottom: 1, trailing: 5))
@@ -43,13 +45,17 @@ struct FinalizeAccountCreation: View {
                     TextField("add a bio", text: $bioText)
                         .padding()
                         .overlay(RoundedRectangle(cornerRadius: 15).stroke(.gray, lineWidth: 2))
+                        .disableAutocorrection(true)
+
                 }
             }.padding()
             
             Button {
-                dataManager.addUser(id: UUID(), email: email, username: usernameText, bio: bioText)
-                authModel.needsUserNameAndBio = false
-                self.presentationMode.wrappedValue.dismiss()
+                if !usernameText.isEmpty && !bioText.isEmpty{
+                    dataManager.addUser(id: UUID(), email: email, username: usernameText, bio: bioText)
+                    authModel.needsUserNameAndBio = false
+                    self.presentationMode.wrappedValue.dismiss()
+                }
             } label: {
                 Text("create account")
                     .frame(width: UIScreen.main.bounds.width * 0.95, height: UIScreen.main.bounds.width * 0.15)

@@ -27,6 +27,7 @@ struct LoginView: View {
                     .disableAutocorrection(true)
                     .padding()
                     .overlay(RoundedRectangle(cornerRadius: 15).stroke(.gray, lineWidth: 2))
+                    .disableAutocorrection(true)
                 SecureField("password", text: $password)
                     .textInputAutocapitalization(.never)
                     .disableAutocorrection(true)

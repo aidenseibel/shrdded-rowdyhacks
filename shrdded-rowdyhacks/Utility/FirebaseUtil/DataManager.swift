@@ -102,7 +102,7 @@ class DataManager: ObservableObject{
     
     // MARK: UPDATE USER FUNCTIONS
     
-    func updateUserFriends(userID: String, friends: [user], handler: @escaping (_ success: Bool) -> ()) {
+    func updateUserFriends(userID: String, friends: [String], handler: @escaping (_ success: Bool) -> ()) {
         let data: [String:Any] = ["friendsByEmail": friends]
         let db = Firestore.firestore()
 

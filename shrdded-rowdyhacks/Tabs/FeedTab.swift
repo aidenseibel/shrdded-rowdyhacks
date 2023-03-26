@@ -22,8 +22,11 @@ struct FeedTab: View {
                     }
 
                     ForEach(sortLiftArrayByTimeWithEarliestFirst(lifts: dataManager.lifts).reversed(), id: \.self){ lift in
-                        LiftPostSubView(lift: lift)
-                    }.overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
+                        if authModel.currentUserFriends.contains(lift.userEmail) || lift.userEmail == authModel.currentUserEmail{
+                            LiftPostSubView(lift: lift)
+                                .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
+                        }
+                    }
                 }
                 .padding()
             }
